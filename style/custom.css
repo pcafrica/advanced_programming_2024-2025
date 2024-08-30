@@ -1,0 +1,61 @@
+/* custom.css */
+/* @theme custom */
+
+@import 'default';
+
+.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+h1 {
+    color: #4949e7;
+    padding-bottom: 5px;
+    border-bottom: solid;
+}
+
+h2, h3, h4, h5, h6 {
+    margin-top: 10px;
+    padding-bottom: 0px;
+}
+
+h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
+    color: #4949e7;
+}
+                                                       
+a {
+    background-color: #4949e7;
+    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 2px 5px 2px 5px;
+}
+
+a code {
+    background-color: #4949e7;
+    color: white;
+    font-size: 85%;
+    padding: 0px;
+}
+
+alert {
+    color: #f60248;
+    font-weight: bold;
+}
+
+section {
+    justify-content: flex-start;
+    padding: 30px;
+    font-size: 28px;
+}
+
+section.titlepage {
+    justify-content: center;
+    padding: 75px;
+    font-size: 30px;
+}
+
+section::after {
+  content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+}
