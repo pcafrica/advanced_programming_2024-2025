@@ -35,7 +35,7 @@ Unless otherwise specified, all content here is licensed under a
 
 # Links and resources
 - [Course material](https://pcafrica.github.io/advanced_programming_2024-2025/).
-- [Google Classroom]().
+- [Google Classroom](https://classroom.google.com/c/NzExNzIzMTkxMTI5?cjc=n6fosq6).
 - [Microsoft Teams]() (only with UniTS credentials).
 
 ---
