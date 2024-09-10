@@ -61,7 +61,7 @@ Unless otherwise specified, all content here is licensed under a
 | Mon 25 Nov 2024 | 13:00 - 15:00 | 005  | |
 | Tue 26 Nov 2024 | 14:00 - 16:00 | 005  | |
 | Mon 02 Dec 2024 | 13:00 - 15:00 | 005  | |
-| Sun 08 Dec 2024 | 14:00 - 16:00 | 005  | |
+| Tue 03 Dec 2024 | 14:00 - 16:00 | 005  | |
 | Mon 09 Dec 2024 | 13:00 - 15:00 | 005  | |
 | Tue 10 Dec 2024 | 14:00 - 16:00 | 005  | |
 | Mon 16 Dec 2024 | 13:00 - 15:00 | 005  | |
