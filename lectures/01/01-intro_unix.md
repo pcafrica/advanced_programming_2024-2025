@@ -606,7 +606,7 @@ If the environment should not be altered, use `./script_file`, instead.
 
 Some commands, like `cd` are executed directly by the shell, without creating a subprocess.
 
-Indeed it would be impossible the have `cd` as a regular command!
+Indeed it would be impossible to have `cd` as a regular command!
 
 **The reason is**: a subprocess cannot change the state of the calling process, whereas `cd` needs to change the value of the environmental variable `PWD`(that contains the name of the current working directory).
 
