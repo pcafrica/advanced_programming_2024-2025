@@ -485,7 +485,7 @@ From [http://www.linfo.org/shell.html](http://www.linfo.org/shell.html):
 
 ---
 
-# What is `Bash`?
+# What shells are available?
 
 `Bash` stands for: `Bourne Again Shell`, a homage to its creator Stephen Bourne. It is the default shell for most UNIX systems and Linux distributions. It is both a command interpreter and a scripting language. The shell might be changed by simply typing its name and even the default shell might be changed for all sessions.
 
@@ -515,7 +515,7 @@ As shell is a program, it has its variables. You can assign a value to a variabl
 
 ---
 
-# `Bash` as a command line interpreter
+# The shell as a command line interpreter
 
 When launching a terminal a UNIX system first launches the shell interpreter specified in the `SHELL` **environment variable**. If `SHELL` is unset it uses the system default.
 
@@ -552,14 +552,14 @@ Initialization files in a shell are scripts or configuration files that are exec
 ---
 
 # Getting started
-To get a little hang of the bash, let’s try a few simple commands:
+To get a little hang of the shell, let’s try a few simple commands:
 - `echo`: prints whatever you type at the shell prompt.
 - `date`: displays the current time and date.
 - `clear`: clean the terminal.
 
 ---
 
-# Basic Bash commands
+# Basic shell commands (1/2)
 
 - `pwd` stands for **Print working directory** and it points to the current working directory, that is, the directory that the shell is currently looking at. It’s also the default place where the shell commands will look for data files.
 - `ls` stands for a **List** and it lists the contents of a directory. ls usually starts out looking at our home directory. This means if we print ls by itself, it will always print the contents of the current directory.
@@ -567,13 +567,26 @@ To get a little hang of the bash, let’s try a few simple commands:
 
 ---
 
-# Basic Bash commands
+# Basic shell commands (2/2)
 
 - `cp` stands for **Copy** and it moves one or more files or directories from one place to another. We need to specify what we want to move, i.e., the source and where we want to move them, i.e., the destination.
 - `mv` stands for **Move** and it moves one or more files or directories from one place to another. We need to specify what we want to move, i.e., the source and where we want to move them, i.e., the destination.
 - `touch` command is used to create new, empty files. It is also used to change the timestamps on existing files and directories.
 - `mkdir` stands for **Make directory** and is used to make a new directory or a folder.
 - `rm` stands for **Remove** and it removes files or directories. By default, it does not remove directories, unless you provide the flag `rm -r` (`-r` means recursively).<br>:warning: **Warning**: Files removed via `rm` are lost forever, please be careful!
+
+---
+
+# Shell scripts
+
+Commands can be written in a **script file**, i.e. a text file that can be executed.
+
+Remember that the **first line of the script** (the so-called *shebang*) tells the shell which interpreter to use while executing the file. So, for example, if your script starts with `#!/bin/bash` it will be run by `Bash`, if is starts with `#!/usr/bin/env python` it will be run by `Python`.
+
+To run your brand new script you may need to change the access permissions of the file. To make a file executable run
+```bash
+chmod +x script_file
+```
 
 ---
 
@@ -586,18 +599,6 @@ When executing a command, like `ls` a subprocess is created. A subprocess inheri
 The command `source script_file` executes the commands contained in `script_file` as if they were typed directly on the terminal. It is only used on scripts that have to change some environmental variables or define aliases or function. Typing `. script_file` does the same.
 
 If the environment should not be altered, use `./script_file`, instead. 
-
----
-
-# Run a script
-
-To run your brand new script you may need to change the access permissions of the file. To make a file executable run
-
-```bash
-chmod +x script_file
-```
-
-Finally, remember that the **first line of the script** (the so-called *shebang*) tells the shell which interpreter to use while executing the file. So, for example, if your script starts with `#!/bin/bash` it will be run by `Bash`, if is starts with `#!/usr/bin/env python` it will be run by `Python`.
 
 ---
 
@@ -629,12 +630,42 @@ The shell looks for executables with a given name within directories specified i
 
 :warning: In order to live happily and without worries, **don't** use spaces nor accented characters in filenames!
 
-Space characters in file names should be forbidden by law! The space is used as separation character, having it in a file name makes things a lot more complicated in any script (not just `Bash` scripts).
+Space characters in file names should be forbidden by law! The space is used as separation character, having it in a file name makes things a lot more complicated in any script (not just shell scripts).
 
 Use underscores (snake case): `my_wonderful_file_name`, or uppercase characters (camel case): `myWonderfulFileName`, or hyphens: `my-wonderful-file-name`, or a mixture:
 `myWonderful_file-name`, instead.
 
 But **not** `my wonderful file name`. It is not wonderful at all if it has to be parsed in a script.
+
+---
+
+# Functions
+
+A **function** in a shell is a block of reusable code that you can define and call throughout your script. Functions are useful for organizing complex scripts and avoiding repetition. The general syntax for defining a function is:
+
+```bash
+function_name() {
+    # Commands to be executed.
+}
+```
+
+Example:
+```bash
+greet() {
+    echo "Hello, $1!"
+}
+```
+In this example, `greet` is a function that takes one argument and echoes a greeting message.
+
+---
+
+# Input arguments in a script or in a function
+
+- `$0`: The name of the script/function itself.
+- `$1`, `$2`, `$3`, etc.: The first, second, third (and so on) argument passed to the script/function.
+- `$#`: The number of arguments passed.
+- `$@`: The list of all the arguments passed as a single string.
+- `$*`: All the arguments as a single word (not often used).
 
 ---
 
