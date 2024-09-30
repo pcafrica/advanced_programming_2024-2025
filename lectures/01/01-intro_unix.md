@@ -263,10 +263,10 @@ See https://isocpp.org/ for language references, guidelines, and much more.
 
 ---
 
-# Object-Oriented paradigm
+# Object-oriented paradigm
 C++ introduced essential features of the OOP paradigm, including classes, objects, inheritance, and polymorphism. These features allowed developers to build more modular and maintainable software by encapsulating data and behavior within objects.
 
-# Template metaprogramming
+# Generic programming
 Another significant innovation in C++ was the introduction of templates. Templates allowed for generic programming, enabling the creation of data structures and algorithms that could work with different data types. Template metaprogramming, a technique that uses templates for compile-time computations, further expanded C++'s capabilities.
 
 ---
@@ -274,7 +274,7 @@ Another significant innovation in C++ was the introduction of templates. Templat
 # C++ in the modern era
 
 ## Standardization efforts
-The C++ language has continued to evolve through a series of standards, each introducing new features and improvements. Notable standards include C++98, C++11, C++14, C++17, and C++20 (C++23 expected soon). These standards have added features like smart pointers, lambda expressions, range-based for loops, and modules, enhancing the language's expressiveness and safety.
+The C++ language has continued to evolve through a series of standards, each introducing new features and improvements. Notable standards include C++98, C++11, C++14, C++17, C++20, C++23 (C++26 expected soon). These standards have added features like smart pointers, lambda expressions, range-based for loops, and modules, enhancing the language's expressiveness and safety.
 <br>
 ## Open source and the C++ community
 C++'s success can be attributed in part to the vibrant open-source community that has formed around it. Open-source libraries and frameworks, such as the Boost C++ Libraries, have extended C++'s functionality and encouraged collaborative development.
@@ -285,7 +285,7 @@ C++'s success can be attributed in part to the vibrant open-source community tha
 
 C++ has found applications in a wide range of fields, including game development, finance, embedded systems, and scientific computing. Its combination of performance, portability, and expressive power makes it a versatile choice for building software across various domains.
 
-C++ continues to evolve, with ongoing work on future language standards. Features like concepts (a type of compile-time constraint) and modules (for better code organization and encapsulation) are expected to play a significant role in shaping the language's future.
+C++ continues to evolve, with ongoing work on future language standards. Features like concepts (a type of compile-time constraint) and modules (for better code organization and encapsulation) from C++20 are expected to play a significant role in shaping the language's future.
 
 The history of C++ is a testament to the enduring power of a well-designed programming language. From its humble beginnings as an extension of C to its status as a modern, versatile language, C++ has left an indelible mark on the world of software development. Its rich history, coupled with ongoing innovations, ensures that C++ will remain a vital tool for programmers for years to come.
 
@@ -335,7 +335,7 @@ Python 2.x and Python 3.x marked a significant phase in Python's history. Python
 # Python's popularity and versatility
 Python's readability, simplicity, and extensive standard library contributed to its widespread adoption. It became a go-to language for web development, scientific computing, data analysis, and automation. Popular web frameworks like Django and Flask further fueled Python's growth.
 
-## Python in Data Science and Machine Learning
+## Python in Data science and Machine learning
 Python gained prominence in data science and machine learning due to libraries like NumPy, pandas, scikit-learn, and TensorFlow. Its ease of use and rich ecosystem made it a favorite among data scientists and engineers.
 
 ## Python in education
@@ -427,7 +427,7 @@ _class: titlepage
 3. Semantic analysis: Checking.
 4. Code generation: Assembly/machine code.
 5. Optimization: Efficiency improvement.
-6. Output: Object files.
+6. Output: Object files. Example: `g++ main.cpp -o main.o`
 
 ### Common compiler options
 `-O`: Optimization levels; `-g`: Debugging info; `-std`: C++ standard.
@@ -744,6 +744,8 @@ _class: titlepage
 Version control, also known as source control, is the practice of tracking and managing changes to software code. Version control systems are software tools that help software teams manage changes to source code over time.
 
 `git` is a free and open-source version control system, originally created by Linus Torvalds in 2005. Unlike older centralized version control systems such as SVN and CVS, Git is distributed: every developer has the full history of their code repository locally. This makes the initial clone of the repository slower, but subsequent operations dramatically faster.
+<br><br>
+[A visual `git` cheat sheet](https://ndpsoftware.com/git-cheatsheet.html).
 
 ---
 
@@ -809,23 +811,6 @@ Before every lecture, download the latest updates by running:
 git pull origin main
 ```
 from inside the cloned folder.
-
----
-
-# Summary
-
-1. Historical background on C++, Python.
-2. The build process:
-   - Compiled vs. interpreted languages.
-   - Preprocessor, compiler, linker, loader.
-3. Introduction to the UNIX shell:
-   - What is a shell.
-   - Variables.
-   - Basic commands and scripting.
-4. Introduction to `git`:
-   - Local vs. remote.
-   - Branching and collaborative working.
-   - Sync the course material with your computer.
 
 ---
 
