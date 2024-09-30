@@ -99,7 +99,7 @@ If you have questions or experience technical issues during the exam, please inf
 
 # Evaluation criteria
 
-## Part 1: 10 open-ended questions (up to 1 point each)
+## Part 1: 10 open-ended questions (up to 1.2 point each)
 - Clarity of expression.
 - Depth of understanding of the theoretical concepts.
 - Application and analysis of knowledge.
@@ -123,7 +123,7 @@ The average of students' scores for homework assignment will be added to the exa
 - Depth of understanding of the theoretical concepts.
 - Application and analysis of knowledge.
 
-## The maximum achievable grade in the main exam is 25.
+## The maximum achievable grade in the main exam is 27.
 The final grade will be calculated by adding the grades from the main exam, homework assignments, and (if applicable, with its respective sign) the oral exam.
 Honors may be granted in exceptional cases, provided the final grade exceeds 30.
 

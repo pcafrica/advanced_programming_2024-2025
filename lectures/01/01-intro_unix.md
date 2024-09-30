@@ -88,7 +88,7 @@ For live programming sessions please **bring your own laptop**.
 
 1. (Optional) **Homework assignments** (up to 5 points):
    - Throughout the course, you will be assigned 2-4 homework projects to complete either individually or in groups of up to 3 students.
-2. **Main exam** (up to 25 points):
+2. **Main exam** (up to 27 points):
    - Theoretical questions (paper-based) and programming exercises (computer-based).
 
 3. (Optional) **Oral discussion**, upon request (by either students or the instructor). It can increase or decrease your grade by up to 3 points.
