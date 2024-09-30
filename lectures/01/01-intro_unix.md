@@ -56,7 +56,7 @@ _class: titlepage
 
 # Practical info
 
-Lectures at SISSA. Check out [GitHub](https://github.com/pcafrica/advanced_programming_2023-2024) regularly for up-to-date timetable, lecture topics, rooms, and course material.
+Lectures at SISSA. Check out [GitHub](https://github.com/pcafrica/advanced_programming_2024-2025) regularly for up-to-date timetable, lecture topics, rooms, and course material.
 
 Course balance (approximate):
 - C++: **70%**, Python: **30%**.
@@ -306,7 +306,7 @@ Python is a versatile and widely-used programming language known for its simplic
 
 ---
 
-# The Genesis of Python
+# The genesis of Python
 
 ## Python's name and design philosophy
 Python was created by Guido van Rossum, a Dutch programmer, in the late 1980s. Guido started working on Python in December 1989 during his time at the Centrum Wiskunde & Informatica (CWI) in the Netherlands. His motivation was to develop a language that combined the simplicity of ABC (a programming language he had worked on previously) with the extensibility of the Amoeba operating system.
@@ -833,7 +833,7 @@ See [here](https://www.digitalocean.com/community/tutorials/understanding-the-ss
 
 Clone the course repository:
 ```
-git clone git@github.com:pcafrica/advanced_programming_2023-2024.git
+git clone git@github.com:pcafrica/advanced_programming_2024-2025.git
 ```
 <br><br>
 
