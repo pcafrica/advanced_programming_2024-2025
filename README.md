@@ -45,7 +45,7 @@ Unless otherwise specified, all content here is licensed under a
 | Date            | Time          | Room    | Topic |
 |-----------------|---------------|---------|-------|
 | Mon 30 Sep 2024 | 13:00 - 15:00 | 005     | Introduction to the course. The UNIX shell. The build process. [[Markdown](lectures/01/01-intro_unix.md)] [[HTML](https://pcafrica.github.io/advanced_programming_2024-2025/lectures/01/01-intro_unix.html)] [[PDF](https://pcafrica.github.io/advanced_programming_2024-2025/lectures/01/01-intro_unix.pdf)] |
-| Tue 01 Oct 2024 | 14:00 - 16:00 | 005     | Exercise session. |
+| Tue 01 Oct 2024 | 14:00 - 16:00 | 005     | Exercise session. [[Markdown](exercises/01/01-intro_unix.md)] [[HTML](https://pcafrica.github.io/advanced_programming_2024-2025/exercises/01/01-intro_unix.html)] [[PDF](https://pcafrica.github.io/advanced_programming_2024-2025/exercises/01/01-intro_unix.pdf)] |
 | Mon 07 Oct 2024 | 13:00 - 15:00 | 005     |       |
 | Tue 08 Oct 2024 | 14:00 - 16:00 | 005     |       |
 | Mon 14 Oct 2024 | 13:00 - 15:00 | 005     |       |
