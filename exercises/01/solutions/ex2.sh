@@ -60,4 +60,4 @@ $(grep "gige7.*E15" ${filename} | wc -l)"
 ########################################
 
 # Be sure not to include node-20, node-21, ..., node-200, ..., node-2**!
-echo "Number of reports for \"nodes-2\": $(grep "node-2," ${filename} | wc -l)"
+echo "Number of reports containing \"node-2\": $(grep "node-2,\|node-2 " ${filename} | wc -l)"
