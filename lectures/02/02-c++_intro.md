@@ -330,8 +330,6 @@ _class: titlepage
 # Heap vs. stack
 
 - Programs use memory to store data and variables.
-- Memory is divided into two main areas: the stack and the heap.
-
 
 ## Stack memory
 - **Stack**: A region of memory for function call frames.
@@ -430,7 +428,7 @@ dynamic_variable = nullptr;
 int* arr = new int[5]; // Dynamically allocate an integer array.
 
 // Access and use the array beyond its allocated size.
-for (int i = 0; i <= 5; i++) {
+for (int i = 0; i <= 5; ++i) {
     arr[i] = i;
 }
 
@@ -479,7 +477,7 @@ numbers[0] = 1; // Assigning values to elements.
 int* dynamic_array = new int[5];
 
 for (int i = 0; i < 5; ++i) {
-    dynamic_array[i] = i * 2;
+    dynamic_array[i] = 2 * i;
 }
 
 delete[] dynamic_array;
@@ -543,7 +541,7 @@ switch (expression) {
 - A `for` loop is used to execute a block of code a specific number of times. It is often used when the number of iterations is known beforehand.
 
 ```cpp
-for (initialization; condition; increment) {
+for (initialization; condition; post-iteration operation) {
     // Code to execute in each iteration.
 }
 ```
