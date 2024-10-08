@@ -11,11 +11,11 @@ _class: titlepage
 ## Introduction to C++.
 <br>
 
-#### Advanced Programming - SISSA, UniTS, 2023-2024
+#### Advanced Programming - SISSA, UniTS, 2024-2025
 
-###### Pasquale Claudio Africa
+###### Giuseppe Alessio D'Inverno
 
-###### 05 Oct 2023
+###### 08 Oct 2024
 
 ---
 
