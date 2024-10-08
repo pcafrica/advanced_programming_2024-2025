@@ -45,7 +45,8 @@ alert {
 }
 
 section {
-    justify-content: flex-start;
+    display: flex;
+    justify-content: start;
     padding: 30px;
     font-size: 28px;
 }
