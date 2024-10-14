@@ -49,7 +49,7 @@ Unless otherwise specified, all content here is licensed under a
 | Mon 07 Oct 2024 | 13:00 - 15:00 | 005     | Introduction to C++. Built-in data types. Variables, pointers and references. Control structures. Functions. [[Markdown](lectures/02/02-c++_intro.md)] [[HTML](https://pcafrica.github.io/advanced_programming_2024-2025/lectures/02/02-c++_intro.html)] [[PDF](https://pcafrica.github.io/advanced_programming_2024-2025/lectures/02/02-c++_intro.pdf)] |
 | Tue 08 Oct 2024 | 14:00 - 16:00 | 005     | Exercise session. [[Markdown](exercises/02/02-c++_intro.md)] [[HTML](https://pcafrica.github.io/advanced_programming_2024-2025/exercises/02/02-c++_intro.html)] [[PDF](https://pcafrica.github.io/advanced_programming_2024-2025/exercises/02/02-c++_intro.pdf)]  |
 | Mon 14 Oct 2024 | 13:00 - 15:00 | 005     | Object oriented programming. Classes and access control in C++. Operators. [[Markdown](lectures/03/03-c++_classes.md)] [[HTML](https://pcafrica.github.io/advanced_programming_2024-2025/lectures/03/03-c++_classes.html)] [[PDF](https://pcafrica.github.io/advanced_programming_2024-2025/lectures/03/03-c++_classes.pdf)] |
-| Tue 15 Oct 2024 | 14:00 - 16:00 | 005     |       |
+| Mon 15 Oct 2024 | 14:00 - 16:00 | 005     | Object oriented programming. Classes and access control in C++. Operators. [[Markdown](exercises/03/03-c++_classes.md)] [[HTML](https://pcafrica.github.io/advanced_programming_2024-2025/exercises/03/03-c++_classes.html)] [[PDF](https://pcafrica.github.io/advanced_programming_2024-2025/exercises/03/03-c++_classes.pdf)] |
 | Mon 21 Oct 2024 | 13:00 - 15:00 | 128-129 |       |
 | Tue 22 Oct 2024 | 14:00 - 16:00 | 128-129 |       |
 | Mon 28 Oct 2024 | 13:00 - 15:00 | 005     |       |
