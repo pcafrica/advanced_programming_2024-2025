@@ -568,7 +568,7 @@ public:
 ```cpp
 // my_class.cpp
 
-#include "my_class.h"
+#include "my_class.hpp"
 
 int MyClass::add(int a, int b) {
     return a + b;
