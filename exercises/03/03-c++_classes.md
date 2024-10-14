@@ -15,7 +15,7 @@ _class: titlepage
 
 ###### Giuseppe Alessio D'Inverno
 
-###### 14 Oct 2023
+###### 15 Oct 2023
 
 ---
 
