@@ -120,21 +120,22 @@ public:
 // Access by direct instance.
 Car my_car; // Creating an object of class Car.
 
-my_car.manufacturer = "Toyota";
-my_car.model = "Camry";
-my_car.year = 2023;
+my_car.manufacturer = "Volkswagen";
+my_car.model = "Tiguan";
+my_car.year = 2024;
 
 my_car.start_engine(); // Invoking a method.
 
 // Access by pointer.
 // This works also for dynamically allocated objects.
-Car* my_car_ptr;
+Car* my_car_ptr = new Car{};
 
 my_car_ptr->manufacturer = "Alfa Romeo";
 my_car_ptr->model = "Giulietta";
 my_car_ptr->year = 2010;
 
 my_car_ptr->start_engine(); // Invoking a method.
+delete my_car_ptr;
 ```
 
 ---
@@ -196,7 +197,7 @@ public:
 };
 ```
 
-:warning: If you have a `const` member function but need to modify a member variable, you can declare that variable as `mutable`.
+:warning: If you have a `const` member function but need to modify a member variable, you can declare that variable as `mutable` (could be dangerous).
 
 ---
 
@@ -452,7 +453,7 @@ public:
 
 # Constructors and destructor<br>implicitly declared by the compilers
 
-![w:600px](images/03_compiler_implicit.png)
+![w:650px](images/03_compiler_implicit.png)
 
 Source: https://howardhinnant.github.io/classdecl.html
 
@@ -487,7 +488,7 @@ std::cout << "Result: " << result << std::endl;
 - **Function size**: Inlining is most effective for small functions. For larger functions, inlining can lead to code bloat and may not improve performance.
 - **Compiler's discretion**: The `inline` keyword is a ***suggestion*** to the compiler, and the compiler can choose whether or not to inline the function based on optimization settings and other factors.
 - **Header files**: If you define `inline` functions in header files, be cautious about including the same header in multiple source files. It can lead to multiple definitions if not managed properly. Using header guards (see Lecture 02) helps prevent this issue.
-- **Balancing readability**: While inlining can improve performance, it should be used judiciously. Overusing inline for functions that don't provide significant performance benefits can lead to less readable code due to code duplication.
+- **Balancing readability**: While inlining can improve performance, it should be used judiciously. Overusing inline for functions that don't provide significant performance benefits can lead to less readable code due to poor code organization.
 
 ---
 
@@ -562,7 +563,9 @@ class MyClass {
 public:
     int add(int a, int b);
 };
+```
 
+```cpp
 // my_class.cpp
 
 #include "my_class.h"
@@ -578,7 +581,7 @@ int MyClass::add(int a, int b) {
 
 ## Pros
 - Separation of interface from implementation for cleaner code organization.
-- Changes to the function implementation do not require recompilation of all translation units that include the header.
+- Changes to the function implementation **do not** require recompilation of all translation units that include the header.
 
 ## Cons
 - Slightly more verbose in terms of code.
@@ -654,7 +657,7 @@ public:
 private:
     int private_var;    // Private member variable.
     void private_func() { // Private member function.
-sssss        // ...
+        // ...
     }
 };
 ```
@@ -676,9 +679,9 @@ public:
 };
 
 struct MyStruct {
-    int a; // Public by default.
+    int x; // Public by default.
 private:
-    int b; // Private.
+    int y; // Private.
 };
 ```
 
@@ -704,9 +707,9 @@ public:
         return temperature;
     }
 
-    void set_temperature(double newTemperature) {
-        if (newTemperature >= -50.0 && newTemperature <= 150.0) {
-            temperature = newTemperature;
+    void set_temperature(double new_temperature) {
+        if (new_temperature >= -50.0 && new_temperature <= 150.0) {
+            temperature = new_temperature;
         } else {
             std::cout << "Invalid temperature value!" << std::endl;
         }
@@ -746,19 +749,22 @@ private:
 ```cpp
 class Cylinder {
 public:
-    double get_volume(const Circle& circle) const {
+    Cylinder(const Circle &circle, double height) : circle(circle), height(height) {}
+    
+    
+    double get_volume() const {
         // Accessing the private member 'radius' of the Circle class.
         return circle.radius * circle.radius * height;
     }
 
 private:
     double height;
+    const Circle circle;
 };
 
-Circle circle{5.0};
-Cylinder cylinder;
-const double volume = cylinder.get_volume(circle);
-// Cylinder can access Circle's private member 'radius'.
+Circle circle{1.0};
+Cylinder cylinder{circle, 0.5};
+const double volume = cylinder.get_volume();
 ```
 
 ---
@@ -776,7 +782,7 @@ Operator overloading is a feature in C++ that allows you to define custom behavi
 
 ## Why use operator overloading?
 
-Operator overloading can improve code readability and maintainability by allowing you to write more natural and expressive code. It lets you use operators like `+`, `-`, `*`, `/`, and others to perform operations specific to your class, just as you would with built-in data types.
+Operator overloading can improve code readability and maintainability by allowing you to write more natural and expressive code. It lets you use operators like `+`, `-`, `*`, `/`, and **many** others to perform operations specific to your class, just as you would with built-in data types.
 
 ---
 
@@ -785,15 +791,18 @@ Operator overloading can improve code readability and maintainability by allowin
 ```cpp
 class Complex {
 public:
-    double real;
-    double imag;
-
+    // ...
+    
     Complex operator+(const Complex& other) {
         Complex result;
         result.real = this->real + other.real;
         result.imag = this->imag + other.imag;
         return result;
     }
+
+private:
+    double real;
+    double imag;
 };
 
 Complex a{2.0, 3.0};
@@ -805,7 +814,7 @@ Complex c = a + b; // Using the overloaded '+' operator.
 
 # Commonly overloaded operators
 
-While you can overload many C++ operators, here are some of the most commonly overloaded operators:
+While you can overload [many C++ operators](https://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B), here are some of the most commonly overloaded operators:
 
 - Arithmetic operators: `+`, `-`, `*`, `/`, `%`, etc.
 - Comparison operators: `==`, `!=`, `<`, `>`, `<=`, `>=`, `<=>` (since C++20), etc.
@@ -849,6 +858,39 @@ std::ostream& operator<<(std::ostream& os, const MyClass& obj) {
 
 MyClass obj;
 std::cout << obj << std::endl;
+```
+
+---
+
+# A more complex example
+
+```cpp
+class Point {
+private:
+    int x, y;
+
+public:
+    Point operator+(const Point& other) {
+        return Point(this->x + other.x, this->y + other.y);
+    }
+
+    bool operator==(const Point& other) const {
+        return (this->x == other.x && this->y == other.y);
+    }
+
+    friend std::ostream& operator<<(std::ostream& os, const Point& p) {
+        os << "(" << p.x << ", " << p.y << ")";
+        return os;
+    }
+};
+
+Point p3 = p1 + p2;
+if (p1 == p2) {
+    cout << "p1 is equal to p2" << endl;
+} else {
+    cout << "p1 is not equal to p2" << endl;
+}
+std::cout << p3 << std::endl;
 ```
 
 ---
