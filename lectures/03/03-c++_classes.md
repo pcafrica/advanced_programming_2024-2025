@@ -751,7 +751,6 @@ class Cylinder {
 public:
     Cylinder(const Circle &circle, double height) : circle(circle), height(height) {}
     
-    
     double get_volume() const {
         // Accessing the private member 'radius' of the Circle class.
         return circle.radius * circle.radius * height;
