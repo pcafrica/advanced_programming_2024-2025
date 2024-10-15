@@ -39,10 +39,10 @@ jobs:
              marp --bespoke.progress --theme style/custom.css --html -I exercises/ -o exercises/
              marp --bespoke.progress --theme style/custom.css --html -I exercises/ -o exercises/ --pdf --pdf-outlines
 
-      # - name: Build homeworks
-      #   run: |
-      #        marp --bespoke.progress --theme style/custom.css --html -I homeworks/ -o homeworks/
-      #        marp --bespoke.progress --theme style/custom.css --html -I homeworks/ -o homeworks/ --pdf --pdf-outlines
+      - name: Build homeworks
+        run: |
+             marp --bespoke.progress --theme style/custom.css --html -I homeworks/ -o homeworks/
+             marp --bespoke.progress --theme style/custom.css --html -I homeworks/ -o homeworks/ --pdf --pdf-outlines
 
       - name: Setup pages
         uses: actions/configure-pages@v5
