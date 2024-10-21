@@ -59,8 +59,6 @@ Classes can have various relationships, including:
 **Association** is a relationship between two or more classes that defines how they are related to each other. It represents a general form of relationship between classes.
 
 ```cpp
-class Student; // Forward declaration.
-
 class Course {
 public:
     Course(const std::string& name) : course_name(name) {}
@@ -170,8 +168,6 @@ public:
 };
 ```
 
-:warning: For improved resource management, composition can be implemented using pointers or references. See below for an example.
-
 ---
 
 # Views (proxies)
@@ -188,7 +184,7 @@ class DiagonalView {
 public:
     DiagonalView(Matrix &mat) : mat(mat) {}
     double & operator()(int i, int j) {
-        return (i == j) ? mat(i, i) : 0.0;
+        return (i == j) ? mat(i, i) : 0.0; // Ternary operator.
     }
 private:
     Matrix &mat;
@@ -334,7 +330,8 @@ In the constructor of a derived class, you can call the constructor of the base 
 class B {
 public:
     B(double x) : x(x) { /* ... */ }
-    // ...
+private:
+    double x;
 };
 
 class D : public B {
@@ -416,16 +413,6 @@ _class: titlepage
 
 ---
 
-# *"is-a"* relationship
-
-Polymorphism should be used only when the relationship between the base and derived class is an *"is-a"* relationship. In this context, the public interface of the derived class is a superset of that of the base class.
-
-This means that one should be able to safely use any member from the public interface of the base class with an object of the derived class.
-
-Therefore, the base class must define the public interface common to all members of the hierarchy.
-
----
-
 # Polymorphism
 
 Public inheritance is the mechanism through which we implement polymorphism, which allows objects belonging to different classes within a hierarchy to operate according to an appropriate type-specific behavior.
@@ -435,6 +422,16 @@ Public inheritance is the mechanism through which we implement polymorphism, whi
 3. If `B *b = new D` is a pointer to the base class converted from a `D*`, calling a `virtual` method will, in fact, invoke the method defined in `D` (this applies to references as well).
 
 **Note:** Overridden virtual methods must have the same return type, with one exception: a method returning a pointer (reference) to a base class may be overridden by a method returning a pointer (reference) to a derived class.
+
+---
+
+# *"is-a"* relationship
+
+Polymorphism should be used only when the relationship between the base and derived class is an *"is-a"* relationship. In this context, the public interface of the derived class is a superset of that of the base class.
+
+This means that one should be able to safely use any member from the public interface of the base class with an object of the derived class.
+
+Therefore, the base class must define the public interface common to all members of the hierarchy.
 
 ---
 
@@ -631,7 +628,7 @@ public:
     virtual double area() = 0; // Pure virtual method.
 };
 
-Shape p; // Illegal! Cannot instantiate an abstract class.
+Shape s; // Illegal! Cannot instantiate an abstract class.
 ```
 
 ---
@@ -699,7 +696,7 @@ public:
 
 class B final : A {
 public:
-    void f(); // Error: f() cannot be overridden as it's final in A.
+    void f() override; // Error: f() cannot be overridden as it's final in A.
     // ...
 };
 
