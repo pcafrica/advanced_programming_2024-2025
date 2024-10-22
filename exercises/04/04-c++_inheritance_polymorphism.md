@@ -32,7 +32,7 @@ In the context of data analysis, create a C++ program that models different type
 # Exercise 1 (1/5)
 
 1. Define an abstract class `DataSource` with a string attribute `name`, a vector `data`, a method `display_info()` and a pure virtual method `read_data()`.
-2. Implement a constructor and a virtual destructor in the `DataSource` class with.
+2. Implement a constructor and a virtual destructor in the `DataSource` class.
 3. Create derived classes `FileDataSource` and `ConsoleDataSource` that inherit from `DataSource`.
 4. Implement constructors for all classes to model different data source types. For example, `FileDataSource` should initialize a `filename` and an input file, `ConsoleDataSource` should have a default constructor.
 2. Implement destructors for the derived classes. For example, the `FileDataSource` constructor should open the file, and its destructor should close it.
