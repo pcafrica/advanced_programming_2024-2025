@@ -174,9 +174,9 @@ _class: titlepage
 ```cpp
 double integrand(double x);
 
-// Pointer to a function taking a double as an input and returning a double.
-using f_ptr = double (*)(double);
-// Or: typedef double (*f_ptr)(double);
+// Define a new type "Pointer to a function
+// taking a double as an input and returning a double".
+using f_ptr = double (*)(double); // Or: typedef double (*f_ptr)(double);
 double integrate(double a, double b, const f_ptr fun);
 
 double I = integrate(0, 3.1415, integrand); // Passing function as a pointer.
@@ -295,7 +295,7 @@ add(5, 3); // Result is stored in calc.result;
 
 # Predefined functors in the Standard Template Library
 
-Under the header `<functional>`, you find a lot of predefined functors.
+Under the header `<functional>`, you find a lot of predefined (templated) functors and predicates.
 
 ```cpp
 std::vector<int> in = {1, 2, 3, 4, 5};
@@ -452,7 +452,7 @@ std::cout << "Circle area: " << compute_area(circle) << std::endl;
 `std::function` can wrap any kind of **callable** object.
 
 ```cpp
-int func(int, int); // A function.
+int func(int, int); // A free function.
 
 class F2 { // A functor.
 public:
@@ -464,7 +464,7 @@ std::vector<std::function<int(int, int)>> tasks;
 tasks.push_back(func); // Wraps a function.
 F2 func2{};
 tasks.push_back(func2); // Wraps a functor.
-tasks.push_back([](int x, int y){ return x * y; }); // Wraps a lambda.
+tasks.push_back([](int x, int y){ return x * y; }); // Wraps a lambda function.
 
 for (auto t : tasks)
     std::cout << t(3, 4) << endl;
@@ -535,21 +535,6 @@ _class: titlepage
 2. **Algorithms:** Generic sorting, searching, and transformation algorithms.
 3. **Math operations:** Functions for arithmetic operations that work with multiple numeric types.
 4. **Custom data structures:** Building generic trees, graphs, or linked lists.
-
----
-
-# Pros of generic programming
-
-- **Code reusability:** Reduced need to write similar code for different data types.
-- **Type safety:** Compile-time checks to ensure type correctness.
-- **Efficiency:** Optimized code for specific data types.
-- **Readability:** Cleaner and more expressive code.
-
-# Cons of generic programming
-
-- **Complexity:** Generic code may be more complex due to abstraction.
-- **Compile-time overhead:** Template instantiation can lead to longer compile times.
-- **Debugging:** Template error messages can be challenging to decipher.
 
 ---
 
@@ -699,7 +684,7 @@ This has two important implications:
 # Constant values as template parameters
 You can give defaults to the rightmost parameters (this applies also).
 
-A template parameter may also be an integral value.
+A template parameter may also be an **integral** value.
 
 ```cpp
 template <int N, int M = 3>
@@ -714,6 +699,21 @@ constexpr int result2 = multiply<2, 7>(); // Calculates 2 * 7 at compile-time.
 Only integral types can be used (e.g., integers, enumerations, pointers, ...).
 
 `constexpr` can be applied to variables, functions, and constructors, to ensure that they are evaluated at **compile time**.
+
+---
+
+# Pros of generic programming
+
+- **Code reusability:** Reduced need to write similar code for different data types.
+- **Type safety:** Compile-time checks to ensure type correctness.
+- **Efficiency:** Optimized code for specific data types.
+- **Readability:** Cleaner and more expressive code.
+
+# Cons of generic programming
+
+- **Complexity:** Generic code may be more complex due to abstraction.
+- **Compile-time overhead:** Template instantiation can lead to longer compile times.
+- **Debugging:** Template error messages can be challenging to decipher.
 
 ---
 
