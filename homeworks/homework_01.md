@@ -15,7 +15,7 @@ _class: titlepage
 
 ###### Pasquale Claudio Africa, Giuseppe Alessio D'Inverno
 
-###### Due date: 31 Oct 2024
+###### Due date: 07 Nov 2024
 
 ---
 
