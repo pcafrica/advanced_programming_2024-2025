@@ -703,12 +703,12 @@ A template parameter may also be an integral value.
 
 ```cpp
 template <int N, int M = 3>
-constexpr int Multiply() {
+constexpr int multiply() {
     return N * M;
 }
 
-constexpr int result1 = Multiply<5>();    // Calculates 5 * 3 at compile-time.
-constexpr int result2 = Multiply<2, 7>(); // Calculates 2 * 7 at compile-time.
+constexpr int result1 = multiply<5>();    // Calculates 5 * 3 at compile-time.
+constexpr int result2 = multiply<2, 7>(); // Calculates 2 * 7 at compile-time.
 ```
 
 Only integral types can be used (e.g., integers, enumerations, pointers, ...).
@@ -882,7 +882,7 @@ _class: titlepage
 
 # Template instantiation and linkage
 
-- The compiler produces the code corresponding to function templates and class template members that are instantiated in each translation unit.
+- The compiler produces the code corresponding to function templates and class template members that are **instantiated** in each translation unit.
 
 - It means that all translation units that contain, for instance, an instruction of the type `std::vector<double> a;` produce the machine code corresponding to the default constructor of a `std::vector<double>`. If we then have `a.push_back(5.0)`, the code for the `push_back` method is produced, and so on.
 
@@ -904,7 +904,7 @@ _class: titlepage
 
 1. Leave everything in a **header file**. However, if the functions/methods are long, it may be worthwhile, for the sake of clarity, to separate definitions from declarations. You can put declarations at the beginning of the file and only short definitions. Then, at the end of the file, add the long definitions for readability.
 
-2. **Separate** declarations (`module.hpp`) and definitions (`module.tpl.hpp`) when templates are long and complex. Then add `#include "module.tpl.hpp"` at the end of `module.hpp`.
+2. **Separate** declarations (`module.hpp`) and definitions (`module.tpl.hpp`) when templates are long and complex. Then add `#include "module.tpl.hpp"` at the end of `module.hpp` (before closing its header guard).
 
 3. **Explicitly instantiation** for a specific list of types. Only in this case, definitions can go to a source file. But if you instantiate a template for other types not explicitly instantiated, the compiler will not have access to the definition, leading to linker errors.
 
@@ -1011,7 +1011,7 @@ private:
 
 MyClass<double, std::vector> x; // 'a' is a std::vector<double>.
 
-MyClass<float> x; // 'a' is a std::complex<float>.
+MyClass<int> x; // 'a' is a std::complex<int>.
 ```
 
 This feature allows to write expressions like `std::vector<std::complex<double>>`.
