@@ -38,7 +38,7 @@ Starting from the `hints/ex2.cpp` source file, develop a library management syst
    - In descending order based on year, using a **lambda function** as a comparator.
    - In ascending order based on the author name, using a **functor** as a comparator.
 
-2. Using `std::copy_if`, fill the `filtered_books` variable by extracting from `books` only the books written by a specific author. Implement the search functional using lambdas.
+2. Using `std::copy_if`, fill a new vector `filtered_books` by extracting from `books` only the books written by a specific author. Implement the search functional using lambdas.
 
 3. Display the results after each step to check for correctness.
 

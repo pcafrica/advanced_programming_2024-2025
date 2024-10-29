@@ -21,7 +21,7 @@ void print(const std::vector<Book> &books) {
 
 int main() {
   // Define a list of books.
-  const std::vector<Book> books = {
+  std::vector<Book> books = {
       {"Go set a watchman", "Harper Lee", "Fiction", 2015},
       {"Animal farm", "George Orwell", "Satire", 1945},
       {"To kill a mockingbird", "Harper Lee", "Fiction", 1960},
