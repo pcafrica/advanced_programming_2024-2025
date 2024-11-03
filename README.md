@@ -59,8 +59,8 @@ Unless otherwise specified, all content here is licensed under a
 | Tue 22 Oct 2024 | 14:00 - 16:00 | 128-129 | Exercise session. [[Markdown](exercises/04/04-c++_inheritance_polymorphism.md)] [[HTML](https://pcafrica.github.io/advanced_programming_2024-2025/exercises/04/04-c++_inheritance_polymorphism.html)] [[PDF](https://pcafrica.github.io/advanced_programming_2024-2025/exercises/04/04-c++_inheritance_polymorphism.pdf)] |
 | Mon 28 Oct 2024 | 13:00 - 15:00 | 005     | Functions. Templates and generic programming in C++. [[Markdown](lectures/05/05-c++_functions_templates.md)] [[HTML](https://pcafrica.github.io/advanced_programming_2024-2025/lectures/05/05-c++_functions_templates.html)] [[PDF](https://pcafrica.github.io/advanced_programming_2024-2025/lectures/05/05-c++_functions_templates.pdf)] |
 | Tue 29 Oct 2024 | 14:00 - 16:00 | 128-129 | Exercise session. [[Markdown](exercises/05/05-c++_functions_templates.md)] [[HTML](https://pcafrica.github.io/advanced_programming_2024-2025/exercises/05/05-c++_functions_templates.html)] [[PDF](https://pcafrica.github.io/advanced_programming_2024-2025/exercises/05/05-c++_functions_templates.pdf)] |
-| Mon 04 Nov 2024 | 13:00 - 15:00 | 005     |       |
-| Tue 05 Nov 2024 | 14:00 - 16:00 | 005     |       |
+| Mon 04 Nov 2024 | 13:00 - 15:00 | 005     | [[Markdown](lectures/06/06-c++_stl.md)] [[HTML](https://pcafrica.github.io/advanced_programming_2024-2025/lectures/06/06-c++_stl.html)] [[PDF](https://pcafrica.github.io/advanced_programming_2024-2025/lectures/06/06-c++_stl.pdf)] |
+| Tue 05 Nov 2024 | 14:00 - 16:00 | 005     | Exercise session. [[Markdown](exercises/06/06-c++_stl_move.md)] [[HTML](https://pcafrica.github.io/advanced_programming_2024-2025/exercises/06/06-c++_stl_move.html)] [[PDF](https://pcafrica.github.io/advanced_programming_2024-2025/exercises/06/06-c++_stl_move.pdf)] |
 | Mon 11 Nov 2024 | 13:00 - 15:00 | 005     |       |
 | Tue 12 Nov 2024 | 14:00 - 16:00 | 005     |       |
 | Mon 18 Nov 2024 | 13:00 - 15:00 | 005     |       |
