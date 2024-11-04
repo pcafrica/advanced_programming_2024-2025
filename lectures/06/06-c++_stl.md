@@ -434,7 +434,7 @@ An iterator is **any object** that allows iterating over a succession of element
 
 All main containers have iterators that belong to the **Forward** category. `std::array` and `std::vector` have **Random access** iterators.
 
-**All containers** have the methods `begin()` and `end()` (`cbegin()` and `cend()`) that return the (`const`) iterator to the first and the *(last + 1)-n*th element in the container. You may also use the corresponding free functions `std::begin()` and `std::end()`, which can be overloaded for any type.
+**All containers** have the methods `begin()` and `end()` iterator to the first and the *(last + 1)-n*th element in the container (`cbegin()` and `cend()` return the `const` equivalents). You may also use the corresponding free functions `std::begin()` and `std::end()`, which can be overloaded for any type.
 
 **All containers** define the types `Container::iterator`, `Container::reverse_iterator`, and the corresponding `const` versions (`Container::const_iterator`, etc.).
 
