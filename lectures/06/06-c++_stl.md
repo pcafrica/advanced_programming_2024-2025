@@ -161,6 +161,12 @@ std::array<int, 3> b{7,8,9};
 
 ---
 
+# Which sequence container to choose?
+
+![bg 60%](images/which_container.png)
+
+---
+
 # Associative containers (1/3)
 
 - **Associative containers**: These collections have elements whose position depends on their content. They are divided into:
@@ -269,7 +275,7 @@ std::cout << std::endl;
 ```cpp
 std::byte flags = std::byte(0b11001010);
 std::byte mask = std::byte(0b11110000);
-std::byte result = flags & mask; // Bitwise AND operation
+std::byte result = flags & mask; // Bitwise AND operation.
 ```
 
 ---
@@ -428,13 +434,13 @@ An iterator is **any object** that allows iterating over a succession of element
 
 All main containers have iterators that belong to the **Forward** category. `std::array` and `std::vector` have **Random access** iterators.
 
-**All containers** have the methods `begin()` and `end()` (`cbegin()` and `cend()`) that return the (`const`) iterator to the first and the *last + 1* element in the container. You may also use the corresponding free functions `std::begin()` and `std::end()`, which can be overloaded for any type.
+**All containers** have the methods `begin()` and `end()` (`cbegin()` and `cend()`) that return the (`const`) iterator to the first and the *(last + 1)-n*th element in the container. You may also use the corresponding free functions `std::begin()` and `std::end()`, which can be overloaded for any type.
 
 **All containers** define the types `Container::iterator`, `Container::reverse_iterator`, and the corresponding `const` versions (`Container::const_iterator`, etc.).
 
-###### :warning: In a const iterator, it is the pointed element that is `const`, not the iterator itself! More precisely, it is an *iterator to `const`*.
+#### :warning: In a const iterator, it is the pointed element that is `const`, not the iterator itself! More precisely, it is an *iterator to `const`*.
 
-###### :warning: `auto` simplifies the use of iterators!
+#### :warning: `auto` simplifies the use of iterators!
 
 ---
 
@@ -718,7 +724,8 @@ For an associative container, the second argument of `inserter` is taken only as
   std::pair<const T&, const T&> minmax(const T& a, const T& b);
 
   template <class InputIt1, class InputIt2>
-  bool lexicographical_compare(InputIt1 first1, InputIt1 last1, InputIt2 first2, InputIt2 last2);
+  bool lexicographical_compare(InputIt1 first1, InputIt1 last1,
+                               InputIt2 first2, InputIt2 last2);
   ```
 
 ---
@@ -857,11 +864,11 @@ The C++ Standard Template Library (STL) has seen several enhancements and improv
 3. [Rvalue references](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP11.md#rvalue-references)
 4. [Lambda expressions](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP11.md#lambda-expressions)
 5. [`auto`](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP11.md#auto)
-5. [`nullptr`](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP11.md#nullptr)
-6. [Range-based for loops](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP11.md#range-based-for-loops)
-7. [Smart pointers](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP11.md#smart-pointers)
-8. [Type traits](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP11.md#type-traits)
-9. ...
+6. [`nullptr`](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP11.md#nullptr)
+7. [Range-based for loops](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP11.md#range-based-for-loops)
+8. [Smart pointers](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP11.md#smart-pointers)
+9. [Type traits](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP11.md#type-traits)
+10. ...
 
 ---
 
@@ -873,6 +880,7 @@ The C++ Standard Template Library (STL) has seen several enhancements and improv
 4. [`decltype(auto)`](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP14.md#decltypeauto)
 5. [Variable templates](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP14.md#variable-templates)
 6. [User-defined literals for standard library types](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP14.md#user-defined-literals-for-standard-library-types)
+7. ...
 
 ---
 
@@ -885,6 +893,7 @@ The C++ Standard Template Library (STL) has seen several enhancements and improv
 5. [`constexpr if`](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP17.md#constexpr-if)
 6. [UTF-8 character literals](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP17.md#utf-8-character-literals)
 7. [New library features like `std::variant`, `std::optional`, and `std::any`](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP17.md#c17-library-features)
+8. ...
 
 --- 
 
@@ -898,6 +907,7 @@ The C++ Standard Template Library (STL) has seen several enhancements and improv
 6. [Template syntax for lambdas](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP20.md#template-syntax-for-lambdas)
 7. [`constexpr` virtual functions](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP20.md#constexpr-virtual-functions)
 8. [New library features, including `std::span` and math constants](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP20.md#c20-library-features)
+9. ...
 
 ---
 
@@ -908,8 +918,103 @@ The C++ Standard Template Library (STL) has seen several enhancements and improv
 3. **Reflection**: Potential support for reflection, making it easier to inspect and manipulate types at runtime.
 4. **Networking library**: The Networking library might become part of the standard, adding networking capabilities.
 5. **Enhanced ranges**: Expanding and refining the ranges library with new utilities.
+6. ...
 
 #### [Source](https://en.cppreference.com/w/cpp/23)
+
+---
+
+# Example: the evolution of `for` loops (1/5)
+
+## 1. Traditional `for` loop (pre-C++11)
+
+```cpp
+std::vector<int> vec = {1, 2, 3, 4, 5};
+for (size_t i = 0; i < vec.size(); ++i) {
+    std::cout << vec[i] << " ";
+}
+```
+
+- **Usage**: Commonly used before C++11.
+- **Explanation**: This form uses an integer index to access elements. It works with any indexable container (like `std::vector` or `std::array`).
+- **Pros**: Allows direct access to both the index and the element, which is useful when you need the position of elements.
+- **Cons**: Can be error-prone with boundary conditions, and may be inefficient if the container recalculates `size()` each time.
+
+---
+
+# Example: the evolution of `for` loops (2/5)
+
+## 2. `for` loop with iterators (pre-C++11)
+
+```cpp
+std::vector<int> vec = {1, 2, 3, 4, 5};
+for (std::vector<int>::iterator it = vec.begin(); it != vec.end(); ++it) {
+    std::cout << *it << " ";
+}
+```
+
+- **Usage**: A step toward more generic and flexible loops.
+- **Explanation**: Uses iterators instead of an index, making it adaptable to all STL containers, including those without random-access iterators (like `std::list`).
+- **Pros**: Supports non-indexable containers and is more generic.
+- **Cons**: Verbose syntax and the need for dereferencing (`*it`) can make code harder to read.
+
+---
+
+# Example: the evolution of `for` loops (3/5)
+
+## 3. Range-based `for` loop (C++11)
+
+```cpp
+std::vector<int> vec = {1, 2, 3, 4, 5};
+for (int value : vec) { // Or: for (const auto value : vec)
+    std::cout << value << " ";
+}
+```
+
+- **Usage**: Introduced in C++11, this syntax is much more concise and readable.
+- **Explanation**: Automatically loops over elements in the container without the need for iterators or indices.
+- **Pros**: Simple, concise, and avoids off-by-one errors. Great for most use cases where you just need the element value.
+- **Cons**: Limited flexibility - doesn't provide access to the index, and modifying elements requires using a reference (`for (int &value : vec)`).
+
+---
+
+# Example: the evolution of `for` loops (4/5)
+
+## 4. Structured bindings (C++17)
+
+```cpp
+std::tuple<int, std::string, double> my_tuple{1, "a string", 2.5};
+const auto [i, s, d] = my_tuple; // Unpack tuple.
+
+std::map<int, std::string> my_map = {{1, "one"}, {2, "two"}};
+for (const auto& [key, value] : my_map) {
+    std::cout << key << ": " << value << "\n";
+}
+```
+
+- **Usage**: Simplifies code when looping over key-value pairs in associative containers.
+- **Explanation**: Introduced in C++17, structured bindings allow unpacking of key-value pairs directly within the loop.
+- **Pros**: Very readable and works well with `std::map` and `std::unordered_map`.
+- **Cons**: Limited to associative containers; doesn’t add much benefit when used with containers like `std::vector`.
+
+---
+
+# Example: the evolution of `for` loops (5/5)
+
+## 5. Range-Based `for` with `std::ranges` (C++20)
+
+```cpp
+#include <ranges>
+
+for (int value : vec | std::views::reverse) {
+    std::cout << value << " ";
+}
+```
+
+- **Usage**: Introduced with the ranges library in C++20.
+- **Explanation**: Adds flexibility by allowing modifications (like `reverse`, `filter`, `transform`) directly in the loop using range adaptors.
+- **Pros**: Makes the loop more expressive and reduces the need for external functions to modify sequences.
+- **Cons**: Requires understanding of range adaptors and may not be necessary for simpler loops.
 
 ---
 
