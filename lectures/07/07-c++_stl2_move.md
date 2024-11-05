@@ -269,8 +269,8 @@ The `std::weak_ptr` is a smart pointer that holds a non-owning (*weak*) referenc
 std::shared_ptr<int> ptr = std::make_shared(10);
 std::weak_ptr<int> weak1 = ptr; // Get pointer to data without taking ownership.
 
-ptr = std::make_shared(5); // Delete managed object, acquires new pointer.
-std::weak_ptr<int> weak2 = sptr; // Get pointer to new data without taking ownership.
+ptr = std::make_shared(5); // Delete managed object, acquires new pointer. weak1 expires.
+std::weak_ptr<int> weak2 = ptr; // Get pointer to new data without taking ownership.
 
 auto tmp1 = weak1.lock()  // tmp1 is nullptr, as weak1 is expired!
 auto tmp2 = weak2.lock()) // tmp2 is a shared_ptr to new data (5).
@@ -433,7 +433,7 @@ Here, `&fun` is a pointer to the function, *not* to the returned value. I cannot
 Non-string literals are rvalues.
 
 ```cpp
-double* pd = &(10.5); // Error (taking the address of a temporary doesn't make sense).
+double* ptr = &(10.5); // Error (taking the address of a temporary doesn't make sense).
 ```
 
 Compilers are free not to store them in memory, so no address may be taken (and it does not make sense to take it).
