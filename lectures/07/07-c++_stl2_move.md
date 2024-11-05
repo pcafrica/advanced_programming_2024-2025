@@ -133,7 +133,7 @@ std::unique_ptr<Polygon> create_polygon(std::string t) {
         case "Square":
             return std::make_unique<Square>(...);
         default:
-            return std::unique_ptr<Polygon>(); // null pointer.
+            return nullptr;
     }
 }
 ```
@@ -180,7 +180,7 @@ For instance you have several objects that **refer** to a resource (e.g., a matr
 
 To this purpose you need a `std::shared_ptr<T>`. It implements the semantic of *clean it up when the resource is no longer used*.
 
-While `std::unique_ptr` do not cause any computational overhead they are just a light wrapper around an ordinary pointer), shared pointers do, so use them only if it is really necessary.
+While `std::unique_ptr` do not cause any computational overhead (they are just a light wrapper around an ordinary pointer), shared pointers do, so use them only if it is really necessary.
 
 ---
 
