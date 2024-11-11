@@ -36,7 +36,7 @@ To improve estimation accuracy, try to increase the number of random points in y
 
 ---
 
-# Exercise 2: `std::pair` (1/2)
+# Exercise 2: `std::pair`
 
 Create a `MyPair` template class that mimics `std::pair`, holding two elements of any type. Implement member variables `first` and `second`, with constructors for default and custom initialization. Overload `operator==`, `operator!=`, and `operator<` for equality and lexicographical comparison. Test your implementation using various data types such as int, double, and std::string.
 
@@ -60,7 +60,7 @@ Each employee is assigned a unique access code, which can be activated using the
 
 ---
 
-# Exercise 4: `std::set` (2/2)
+# Exercise 3: `std::set` (2/2)
 
 Your task is to implement the `Access` class as described above. Write a test program that accomplishes the following tasks:
 
@@ -74,7 +74,7 @@ Your task is to implement the `Access` class as described above. Write a test pr
 
 ---
 
-# Exercise 5: `std::map` (1/2)
+# Exercise 4: `std::map` (1/2)
 
 In the previous exercise, the customer using the security system wants to associate an access level with each access code. Users with higher access levels should be able to open doors to more security-sensitive areas of the building compared to users with lower access levels. Start with your solution from the previous exercise and make the following modifications to the `Access` class:
 
@@ -92,7 +92,7 @@ The `is_active()` function should return `true` if the specified access code has
 
 ---
 
-# Exercise 5: `std::map` (2/2)
+# Exercise 4: `std::map` (2/2)
 
 Now, update the main program to perform the following tasks:
 
@@ -107,7 +107,7 @@ Now, update the main program to perform the following tasks:
 
 ---
 
-# Exercise 6: STL containers and algorithms
+# Exercise 5: STL containers and algorithms
 
 1. **Generate a vector**: Create a vector named `random_numbers` that contains 100 random integers between 0 and 9.
 2. **Sort the vector**: Create a new vector named `sorted_numbers` by sorting the `random_numbers` vector in ascending order, with repetitions.
@@ -116,7 +116,7 @@ Now, update the main program to perform the following tasks:
 
 ---
 
-# Exercise 7: Word frequency analysis
+# Exercise 6: Word frequency analysis
 
 The file `input.txt` contains a list of random complete sentences in English. Develop a C++ program that reads the file, calculates the frequency of each word in the text, and outputs the word-frequency pairs to a new file in a dictionary format.
 
@@ -128,7 +128,7 @@ The program should generate a new file (named `output.txt`) containing the word-
 
 ---
 
-# Exercise 8: Move semantics for efficient data transfers
+# Exercise 7: Move semantics for efficient data transfers
 
 Define a class `Vector` that represents a one-dimensional vector of double values, stored as a raw pointer `double *data`.
 
@@ -138,7 +138,7 @@ Define a class `Vector` that represents a one-dimensional vector of double value
 
 ---
 
-# Exercise 9: Smart pointers with polymorphism
+# Exercise 8: Smart pointers with polymorphism
 
 Create a C++ program that demonstrates how `std::unique_ptr` and `std::shared_ptr` can be used with polymorphism.
 
