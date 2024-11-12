@@ -109,7 +109,7 @@ will download header files, libraries and tools required for building applicatio
 # Curated lists of awesome C++ and Python frameworks, libraries, resources, and shiny things.
 <br><br>
 
-- ## [Popular GitHub repositories using C++](https://github.com/search?q=stars%3A%3E500+language%3AC%2B%2B+&type=repositories) $\left(\geq 4500\right)$!
+- ## [Popular GitHub repositories using C++](https://github.com/search?q=stars%3A%3E500+language%3AC%2B%2B+&type=repositories) $\left(\geq 5k\right)$!
 - ## [awesome-cpp](https://github.com/fffaraz/awesome-cpp)
 - ## [awesome-python](https://github.com/vinta/awesome-python)
 - ## [awesome-scientific-python](https://github.com/rossant/awesome-scientific-python)
