@@ -1,4 +1,4 @@
-# Configure GSL
+# Configure [GSL](https://www.gnu.org/software/gsl/)
 ```bash
 ./configure --enable-shared --enable-static --prefix=/opt/gsl
 make -j<N>
