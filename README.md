@@ -63,7 +63,7 @@ Unless otherwise specified, all content here is licensed under a
 | Tue 05 Nov 2024 | 14:00 - 16:00 | 005     | Smart pointers, move semantics, STL utilities. [[Markdown](lectures/07/07-c++_stl2_move.md)] [[HTML](https://pcafrica.github.io/advanced_programming_2024-2025/lectures/07/07-c++_stl2_move.html)] [[PDF](https://pcafrica.github.io/advanced_programming_2024-2025/lectures/07/07-c++_stl2_move.pdf)]
 | Mon 11 Nov 2024 | 13:00 - 15:00 | 005     | Exercise session. [[Markdown](exercises/06/06-c++_stl_move.md)] [[HTML](https://pcafrica.github.io/advanced_programming_2024-2025/exercises/06/06-c++_stl_move.html)] [[PDF](https://pcafrica.github.io/advanced_programming_2024-2025/exercises/06/06-c++_stl_move.pdf)] |
 | Tue 12 Nov 2024 | 14:00 - 16:00 | 005     | Libraries: principles, building, and use. [[Markdown](lectures/08/08-c++_libraries.md)] [[HTML](https://pcafrica.github.io/advanced_programming_2024-2025/lectures/08/08-c++_libraries.html)] [[PDF](https://pcafrica.github.io/advanced_programming_2024-2025/lectures/08/08-c++_libraries.pdf)] |
-| Mon 18 Nov 2024 | 13:00 - 15:00 | 005     |       |
+| Mon 18 Nov 2024 | 13:00 - 15:00 | 005     | Exercise session: Introduction to GNU Make. [[Markdown](exercises/07/07-c++_make_libraries.md)] [[HTML](https://pcafrica.github.io/advanced_programming_2024-2025/exercises/07/07-c++_make_libraries.html)] [[PDF](https://pcafrica.github.io/advanced_programming_2024-2025/exercises/07/07-c++_make_libraries.pdf)] |
 | Tue 19 Nov 2024 | 14:00 - 16:00 | 005     |       |
 | Mon 25 Nov 2024 | 13:00 - 15:00 | 005     |       |
 | Tue 26 Nov 2024 | 14:00 - 16:00 | 005     |       |
