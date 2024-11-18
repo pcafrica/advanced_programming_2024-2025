@@ -622,7 +622,7 @@ The number of floating point operations is the same in both cases!
 
 The answer is not straightforward: it depends on the computer's architecture.
 
-On my laptop (8th Gen Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz), <alert>`sum2` is approximately 10 times faster than `sum1`</alert> with `size = 1e9`! (see `examples/unrolling/unrolling.cpp`).
+On my laptop (Intel(R) Core(TM) Ultra 7 155H CPU @ 4.80GHz), <alert>`sum2` is approximately 10 times faster than `sum1`</alert> with `size = 1e9`! (see `examples/unrolling/unrolling.cpp`).
 
 Why? The Streaming SIMD Extensions (SSE2) instruction set of the CPU allows for parallelization at the microcode level. It's a super-scalar architecture with multiple instruction pipelines to execute several instructions concurrently during a clock cycle. The code of `test2` better exploits this capability.
 
