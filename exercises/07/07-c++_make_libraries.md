@@ -324,7 +324,7 @@ Would the same considerations apply if dynamic linking (shared libraries) were u
 
 ---
 
-# Exercise 4: dynamic loading
+# (:warning: Advanced) Exercise 4: dynamic loading
 
 This exercise showcases dynamic loading, the building block for implementing a *plugin* system.
 
