@@ -212,7 +212,7 @@ $(LIB_NAME_STATIC): $(OBJ)
 	ar rcs $@ $^
 
 $(LIB_NAME_SHARED): $(OBJ_fPIC)
-	g++ $(CXXFLAGS) -shared $^ -o $@
+	$(CXX) $(CXXFLAGS) -shared $^ -o $@
 
 %.fpic.o: %.cpp $(DEPS)
 	$(CXX) -c -fPIC $(CPPFLAGS) $(CXXFLAGS) $< -o $@
