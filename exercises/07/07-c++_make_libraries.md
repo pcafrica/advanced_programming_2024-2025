@@ -11,11 +11,11 @@ _class: titlepage
 ## Introduction to GNU Make. Libraries: building and use.
 <br>
 
-#### Advanced Programming - SISSA, UniTS, 2023-2024
+#### Advanced Programming - SISSA, UniTS, 2024-2025
 
 ###### Pasquale Claudio Africa
 
-###### 16 Nov 2023
+###### 18 Nov 2024
 
 ---
 
