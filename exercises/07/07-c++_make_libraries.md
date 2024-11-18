@@ -191,7 +191,7 @@ CXXFLAGS=-std=c++17 -Wall -Wpedantic -Werror
 
 SRC=math.cpp
 OBJ=$(SRC:.cpp=.o)
-OBJ_fPIC=$(SRC:.cpp=.shared.o)
+OBJ_fPIC=$(SRC:.cpp=.fpic.o)
 DEPS=math.hpp
 
 LIB_NAME_STATIC=libmath.a
@@ -214,7 +214,7 @@ $(LIB_NAME_STATIC): $(OBJ)
 $(LIB_NAME_SHARED): $(OBJ_fPIC)
 	g++ $(CXXFLAGS) -shared $^ -o $@
 
-%.shared.o: %.cpp $(DEPS)
+%.fpic.o: %.cpp $(DEPS)
 	$(CXX) -c -fPIC $(CPPFLAGS) $(CXXFLAGS) $< -o $@
 
 %.o: %.cpp $(DEPS)
