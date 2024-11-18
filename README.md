@@ -44,7 +44,7 @@ Unless otherwise specified, all content here is licensed under a
 # Homeworks
 
 - Homework 01 [[Markdown](homeworks/homework_01.md)] [[HTML](https://pcafrica.github.io/advanced_programming_2024-2025/homeworks/homework_01.html)] [[PDF](https://pcafrica.github.io/advanced_programming_2024-2025/homeworks/homework_01.pdf)] [[Google Classroom](https://classroom.google.com/c/NzExNzIzMTkxMTI5/a/NzIzNjQ1MjY5NjYx/details)]
-- Homework 02 [[Markdown](homeworks/homework_02.md)] [[HTML](https://pcafrica.github.io/advanced_programming_2024-2025/homeworks/homework_02.html)] [[PDF](https://pcafrica.github.io/advanced_programming_2024-2025/homeworks/homework_02.pdf)] [[Google Classroom](https://classroom.google.com/c/NzExNzIzMTkxMTI5/a/NzIzNjQ1MjY5NjYx/details)]
+- Homework 02 [[Markdown](homeworks/homework_02.md)] [[HTML](https://pcafrica.github.io/advanced_programming_2024-2025/homeworks/homework_02.html)] [[PDF](https://pcafrica.github.io/advanced_programming_2024-2025/homeworks/homework_02.pdf)] [[Google Classroom](https://classroom.google.com/c/NzExNzIzMTkxMTI5/a/NzMyMDk4Njc5NjU5/details)]
 
 ---
 # Timetable
