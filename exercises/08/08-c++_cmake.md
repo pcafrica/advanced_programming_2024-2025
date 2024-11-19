@@ -480,7 +480,8 @@ add_subdirectory(tests)
 
 # Exercise 1
 
-Following `exercises/07/solutions/ex1`, compile `muParserX` using CMake and write a `CMake` script to compile and link the test code `ex1.cpp` against it.
+1. Following `exercises/07/solutions/ex1`, compile `muParserX` using the builtin CMake configurator.
+2. Write a `CMake` script to compile and link the test code `ex1.cpp` against it.
 
 ---
 
