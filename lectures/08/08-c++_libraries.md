@@ -286,14 +286,14 @@ When linking, the order matters. Libraries should be listed in reverse order of 
 
 So, for example, if `myprogram` depends on `mylibrary1` which on turn depends on `mylibrary2`, then `mylibrary2` should come first:
 ```bash
-g++ myprogram.o -lmylibrary2 -lmylibrary1 -o myprogram
+g++ myprogram.o -lmylibrary1 -lmylibrary2 -o myprogram
 ```
 
-And these are both wrong:
+Other permutations are wrong:
 
 ```bash
-g++ myprogram.o -lmylibrary1 -lmylibrary2 -o myprogram
-g++ -lmylibrary2 -lmylibrary1 myprogram.o -o myprogram
+g++ myprogram.o -lmylibrary2 -lmylibrary1 -o myprogram
+g++ -lmylibrary1 -lmylibrary2 myprogram.o -o myprogram
 ```
 
 Undefined symbols in `main.o` are not searched in the given libraries.
