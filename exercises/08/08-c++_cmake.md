@@ -8,7 +8,7 @@ _class: titlepage
 # Exercise session 08
 <br>
 
-## Introduction to CMake.<br>Optimization, debugging, profiling, testing.
+## Introduction to CMake.
 <br>
 
 #### Advanced Programming - SISSA, UniTS, 2024-2025
