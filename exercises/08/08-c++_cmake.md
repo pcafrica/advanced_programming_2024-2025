@@ -176,6 +176,8 @@ target_link_libraries(my_exec my_lib)
 target_compile_features(my_exec cxx_std_20)
 # Last command is equivalent to:
 # set_target_properties(my_exec PROPERTIES CXX_STANDARD 20)
+
+target_compile_options(my_exec PUBLIC -Wall -Wpedantic)
 ```
 
 ---
