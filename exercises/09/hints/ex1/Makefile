@@ -4,7 +4,7 @@ CPPFLAGS ?= -O3 -Wall -pedantic -I.
 LDLIBS   ?= 
 LINK.o := $(LINK.cc) # Use C++ linker.
 
-EXEC = ex2
+EXEC = ex1
 SRCS = $(wildcard *.cpp)
 OBJS = $(SRCS:.cpp=.o)
 

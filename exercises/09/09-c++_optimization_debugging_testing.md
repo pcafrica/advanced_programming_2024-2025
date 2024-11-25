@@ -87,7 +87,7 @@ The folder `examples/optimization` contains three examples:
 
 # Exercise 1: Optimization
 
-The `hints/ex2/` directory contains the implementation of a class for dense matrices organized as **column-major**.
+The `hints/ex1/` directory contains the implementation of a class for dense matrices organized as **column-major**.
 
 - Implement `Matrix::transpose()`, a method to compute $A = A^T$.
 - Implement `operator*`, a function to compute matrix-matrix multiplication.
@@ -118,7 +118,7 @@ The content of `examples/debug` was inspired by [this repository](https://github
 
 # Exercise 2: Debugging
 
-The `hints/ex3/` directory contains an implementation of a double-linked list class. The class stores a pointer to the head, and each node (except for the head and the tail, obviously) contains a pointer to the previous and to the next node.
+The `hints/ex2/` directory contains an implementation of a double-linked list class. The class stores a pointer to the head, and each node (except for the head and the tail, obviously) contains a pointer to the previous and to the next node.
 
 The implementation contains a lot of errors, namely:
 
@@ -141,7 +141,7 @@ _class: titlepage
 
 # Exercise 3: Testing
 
-The `hints/ex4/` contains a static function to compute the mean of a `std::vector`.
+The `hints/ex3/` contains a static function to compute the mean of a `std::vector`.
 
 Following the given directory structure and using [Google Test](https://google.github.io/googletest/), fill in the missing parts in `tests/mean.cpp` to check that the function behaves as expected in all the listed cases.
 
@@ -154,4 +154,3 @@ or
 ctest
 ```
 from the CMake build folder.
-
