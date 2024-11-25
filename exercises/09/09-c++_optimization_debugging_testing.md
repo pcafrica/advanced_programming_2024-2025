@@ -29,7 +29,7 @@ _class: titlepage
 
 ![bg fit](images/cpu_memory_performance_gap.png)
 
-[Source](https://doi.org/10.3390/electronics12030754)
+[Source](https://medium.com/@abruyns/memory-holds-the-keys-to-ai-adoption-5acd5e06508b)
 
 ---
 
