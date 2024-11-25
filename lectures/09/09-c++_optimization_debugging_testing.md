@@ -425,11 +425,10 @@ _class: titlepage
 # Verification vs. validation
 
 ## **Verification:** Ensuring correct implementation
+Conducted during development, tests **individual components** separately. Specific tests demonstrate correct functionality, covering the code and checking for memory leaks.
+
 ## **Validation:** Confirming desired behavior
-
-- **Verification:** Conducted during development, tests **individual components** separately. Specific tests demonstrate correct functionality, covering the code and checking for memory leaks.
-
-- **Validation:** Performed on the **final code**. Assesses if the code produces the intended outcome - convergence, reasonable results, and expected computational complexity.
+Performed on the **final code**. Assesses if the code produces the intended outcome - convergence, reasonable results, and expected computational complexity.
 
 ---
 
@@ -449,7 +448,7 @@ _class: titlepage
 
 - **Code reliability:** Testing ensures the code behaves as expected and provides reliable results under different conditions.
 
-- **Documentation:** Test cases serve as documentation for how different parts of the code are expected to work. They help other developers understand the intended behavior of functions and classes.
+- **Documentation:** Test cases serve as documentation for how different parts of the code are expected to work/to be used. They help other developers understand the intended behavior of functions and classes.
 
 ---
 
