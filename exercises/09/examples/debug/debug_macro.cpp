@@ -11,6 +11,9 @@ int main(int argc, char **argv) {
   std::cout << "a = " << a << std::endl;
   std::cout << "b = " << b << std::endl;
 
+#define VAR 2
+#pragma message STRING(VAR)
+
   std::cout << "2 * (" << a << " + " << b << ") = " << TWO_X(a + b)
             << std::endl;
 
