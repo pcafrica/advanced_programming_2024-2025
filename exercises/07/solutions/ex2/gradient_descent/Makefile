@@ -7,15 +7,15 @@ OBJ=$(SRC:.cpp=.o)
 DEPS=$(wildcard *.hpp)
 
 LIB_NAME=libgradient_descent.so
-LIB_VERSION_MAJOR=1
-LIB_VERSION_MINOR=1
+LIB_VERSION_MAJOR=2
+LIB_VERSION_MINOR=0
 
 LIB_NAME_REAL=$(LIB_NAME).$(LIB_VERSION_MAJOR).$(LIB_VERSION_MINOR)
 
 all: $(LIB_NAME_REAL)
 
 $(LIB_NAME_REAL): $(OBJ)
-	g++ $(CXXFLAGS) -shared $^ -Wl,-soname,$(LIB_NAME).$(LIB_VERSION_MAJOR) -o $@
+	g++ $(CXXFLAGS) -shared $^ -Wl,-soname,$(LIB_NAME) -o $@
 	ln -sf $(LIB_NAME_REAL) $(LIB_NAME).$(LIB_VERSION_MAJOR)
 	ln -sf $(LIB_NAME).$(LIB_VERSION_MAJOR) $(LIB_NAME)
 
