@@ -1711,4 +1711,4 @@ def repeat_string(s, n = 2):
 _class: titlepage
 -->
 
-# :arrow_right: Modules and packages.<br>Object-oriented programming.<br>Classes, inheritance and polymorphism.
+# :arrow_right: Object-oriented programming.<br>Classes, inheritance and polymorphism.<br>Modules and packages.
