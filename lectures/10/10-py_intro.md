@@ -471,7 +471,7 @@ _class: titlepage
 
 ---
 
-# Sets (1/2)
+# Sets
 
 Another built-in Python data type is the `set`, which stores an **unordered** list of **unique** items. Being unordered, sets do not record element position or order of insertion and so do not support indexing.
 
@@ -556,12 +556,12 @@ tup = ()
 ```
 
 ```python
-dic = dict() # Or:
-dic = {}
+st = set()
 ```
 
 ```python
-st = set()
+dic = dict() # Or:
+dic = {}
 ```
 
 ---
@@ -1064,12 +1064,12 @@ Python tries to execute the code in the `try` block. If an error is encountered,
 x = 2
 y = 0
 
-try: 
-    result = x / y 
-except ZeroDivisionError: 
-    print("Sorry! You are dividing by zero ") 
+try:
+    result = x / y
+except ZeroDivisionError:
+    print("Sorry! You are dividing by zero.")
 else:
-    print("Yeah! Your answer is:", result) 
+    print("Yeah! Your answer is: ", result)
 finally:
     # This block is always executed
     # regardless of exception generation.
@@ -1455,6 +1455,24 @@ print_args_and_kwargs(1, 2, 3, name="John", age=25)
 > 3
 > name: John
 > age: 25
+
+---
+
+# Example
+
+```python
+def data_summary(*args, **kwargs):
+    round_digits = kwargs.get('round_digits', 2)
+    for i, data in enumerate(args, 1):
+        mean = round(sum(data) / len(data), round_digits)
+        print(f"Dataset {i}: Mean = {mean}")
+
+# Example usage
+data_summary([1, 2, 3, 4], [10, 20, 30, 40], round_digits=1)
+```
+
+> Dataset 1: Mean = 2.5
+> Dataset 2: Mean = 25.0
 
 ---
 
