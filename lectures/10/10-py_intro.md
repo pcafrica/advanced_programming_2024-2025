@@ -293,7 +293,7 @@ full_greeting = greeting + name  # Concatenation.
 
 ---
 
-# String manipulation
+# String manipulation (1/2)
 
 ```python
 # String methods.
@@ -310,11 +310,9 @@ lower_case = message.lower() # Return a new string.
 formatted_message = f"Message: {message}"
 ```
 
-There are *many* string methods. Check out the [documentation](https://docs.python.org/3.12/library/stdtypes.html#string-methods).
-
 ---
 
-# String manipulation
+# String manipulation (2/2)
 
 ```python
 all_caps = "HOW ARE YOU TODAY?"
@@ -327,6 +325,8 @@ caps_list = list(all_caps)
 "".join(caps_list).lower().split(" ") # ['how', 'are', 'you', 'today?']
 ```
 
+There are *many* string methods. Check out the [documentation](https://docs.python.org/3.12/library/stdtypes.html#string-methods).
+
 ---
 
 # String formatting
@@ -336,13 +336,13 @@ Python has ways of creating strings by *filling in the blanks* and formatting th
 ```python
 name = "Newborn Baby"
 age = 4 / 12
-day = 30
+day = 26
 month = 7
-year = 2023
+year = 2024
 template_new = f"Hello, my name is {name}. I am {age:.2f} years old. I was born {day}/{month:02}/{year}."
 template_new
 ```
-> 'Hello, my name is Newborn Baby. I am 0.33 years old. I was born 30/07/2023.'
+> 'Hello, my name is Newborn Baby. I am 0.33 years old. I was born 26/07/2024.'
 
 See format code options [here](https://docs.python.org/3.12/library/string.html#format-specification-mini-language).
 
@@ -402,7 +402,7 @@ You can see the documentation for more [list methods](https://docs.python.org/3.
 
 ```python
 # Tuple creation.
-today = (1, 2, "THREE", 4, 0.5)
+my_tuple = (1, 2, "THREE", 4, 0.5)
 coordinates = (2, 3)
 
 # Unpacking.
@@ -623,7 +623,7 @@ The main points to notice:
 - `if` statements don't necessarily need `elif` or `else`.
 - `elif` lets us check several conditions.
 - `else` lets us evaluate a default block if all other conditions are `False`.
-- the end of the entire `if` statement is where the indentation returns to the same level as the first `if` keyword.
+- The end of the entire `if` statement is where the indentation returns to the same level as the first `if` keyword.
 
 ---
 
@@ -968,7 +968,7 @@ print(first_letters)
 List comprehension allows us to do this in one compact line:
 
 ```python
-letters = [word[0] for word in subliminal]  # List comprehension.
+letters = [word[0] for word in subliminal] # List comprehension.
 letters
 ```
 > ['T', 'i', 'm', 'e', 't', 'o', 'l', 'e', 'a', 'r', 'n', '!']
@@ -1055,6 +1055,26 @@ Python tries to execute the code in the `try` block. If an error is encountered,
 5 / 0
 ```
 > ZeroDivisionError: division by zero
+
+---
+
+# A complete example
+
+```python
+x = 2
+y = 0
+
+try: 
+    result = x / y 
+except ZeroDivisionError: 
+    print("Sorry! You are dividing by zero ") 
+else:
+    print("Yeah! Your answer is:", result) 
+finally:
+    # This block is always executed
+    # regardless of exception generation.
+    print('This is always executed')
+```
 
 ---
 
