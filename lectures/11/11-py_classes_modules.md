@@ -75,7 +75,7 @@ def full_name(first, last):
 
 This approach requires repetitive code for each member:
 ```python
-advprog_2 = {'first': 'Alessio', 'last': 'D\'Inverno', 'email': gdinvern@sissa.it'}
+advprog_2 = {'first': 'Giuseppe', 'last': 'D\'Inverno', 'email': gdinvern@sissa.it'}
 full_name(advprog_2['first'], advprog_2['last'])
 ```
 
@@ -609,7 +609,7 @@ class AdvProgInstructor(AdvProgMember):
     def add_student(self, student):
         self.students.append(student)
 
-    def remove_course(self, student):
+    def remove_student(self, student):
         self.students.remove(student)
 
 instructor_1 = AdvProgInstructor('Pasquale', 'Africa')
@@ -656,7 +656,7 @@ print(advprog_1.full_name())
 
 ---
 
-# The `@property` decorator (1/2)
+# Getters: the `@property` decorator (1/2)
 
 Imagine that I mis-spelled the name of the first name and wanted to correct it. Watch what happens.
 
@@ -681,7 +681,7 @@ class AdvProgMember:
 
 ---
 
-# The `@property` decorator (2/2)
+# Getters: the `@property` decorator (2/2)
 
 Now, changes to the `first` name reflect in the `email`:
 
@@ -748,7 +748,7 @@ advprog_1.full_name = 'Pasquale Africa'
 
 # Deleters
 
-We've talked about getting information and setting information, but what about deletting information? This is typically used to do some clean up and is defined with the `@<attribute>.deleter` decorator.
+We've talked about getting information and setting information, but what about deleting information? This is typically used to do some clean up and is defined with the `@<attribute>.deleter` decorator.
 
 ```python
 class AdvProgMember:
@@ -1032,9 +1032,7 @@ In addition to the standard library, there is an active collection of hundreds o
 
 Packages are a convenient way to organize modules hierarchically, often seen in the Python standard library.
 
-In summary, modules and packages enhance code reusability in Python. The standard library showcases the power of these concepts, and creating your own modules and packages can significantly improve code organization and maintainability. 
-
-Next, we will delve into common Python packages for scientific computing, namely NumPy, SciPy, matplotlib/seaborn and pandas.
+In summary, modules and packages enhance code reusability in Python. The standard library showcases the power of these concepts, and creating your own modules and packages can significantly improve code organization and maintainability.
 
 ---
 
@@ -1050,4 +1048,4 @@ _class: titlepage
 _class: titlepage
 -->
 
-# :arrow_right: Introduction to NumPy and SciPy for scientific computing. Plotting.<br>Introduction to pandas for data analysis. 
+# :arrow_right: Integrating C++ and Python codes.
