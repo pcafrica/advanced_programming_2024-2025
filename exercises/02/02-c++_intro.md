@@ -1,7 +1,11 @@
+---
+marp: true
+---
+
 <!--
 title: Exercise session 02
 paginate: true
-
+theme: custom
 _class: titlepage
 -->
 

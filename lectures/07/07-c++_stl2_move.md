@@ -1,7 +1,11 @@
+---
+marp: true
+---
+
 <!--
 title: Lecture 07
 paginate: true
-
+theme: custom
 _class: titlepage
 -->
 

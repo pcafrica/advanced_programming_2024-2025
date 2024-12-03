@@ -1,3 +1,7 @@
+---
+marp: true
+---
+
 <!--
 title: Exercise session 10
 paginate: true
