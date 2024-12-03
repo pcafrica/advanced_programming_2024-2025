@@ -31,15 +31,13 @@ $$
 u_{n+1} = u_n - h \sin\left(u_n\right).
 $$
 
-1. Write a generator that computes the solution values $u_n$ for a given initial value $u_0 = 1$ and a given value of the time step $h = 0.1$.
-
-2. Implement a generator decorator `step_counter` that counts how many time steps have been performed.
+Starting from `hints/ex1.py`, given initial value $u_0 = 1$ and a given value of the time step $h = 0.1$, implement a decorator `step_counter` that counts how many time steps have been performed. Perform 10 steps.
 
 ---
 
 # Exercise 2: `Polynomial` class (1/3)
 
-You are tasked with implementing a Python class called `Polynomial` that represents polynomials. The class should have the following features:
+Starting from `hints/ex2.py`, you are tasked with implementing a Python class called `Polynomial` that represents polynomials. The class should have the following features:
 
 1. **Constructor**: The class should have a custom constructor that takes variable coefficients as arguments. The coefficients should be provided in increasing order of degree ($a_0 + a_1 x + \dots + a_n x^n$).
 
