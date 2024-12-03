@@ -31,7 +31,7 @@ $$
 u_{n+1} = u_n - h \sin\left(u_n\right).
 $$
 
-Starting from `hints/ex1.py`, given initial value $u_0 = 1$ and a given value of the time step $h = 0.1$, implement a decorator `step_counter` that counts how many time steps have been performed. Perform 10 steps.
+Starting from `hints/ex1.py`, given initial value $u_0 = 1$ and a given value of the time step $h = 0.1$, implement a decorator `step_counter` that counts and prints how many time steps have been performed. Perform 10 steps.
 
 ---
 

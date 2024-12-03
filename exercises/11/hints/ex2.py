@@ -6,6 +6,12 @@ class Polynomial:
     def __init__(self, *coefficients):
         self.coefficients = coefficients
 
+    @classmethod
+    def from_string(cls, poly_str):
+        terms = poly_str.split("+")
+        coefficients = [int(term.split("x")[0]) for term in terms]
+        return cls(*coefficients)
+
     def __repr__(self):
         pass
 
@@ -16,12 +22,6 @@ class Polynomial:
         pass
 
     
-    @classmethod
-    def from_string(cls, poly_str):
-        terms = poly_str.split("+")
-        coefficients = [int(term.split("x")[0]) for term in terms]
-        return cls(*coefficients)
-
 class StandardPolynomialEvaluator(Polynomial):
     pass
 
