@@ -28,6 +28,21 @@ Unless otherwise specified, all content here is licensed under a
 
 ---
 
+# :calendar: Exam dates
+
+**:warning: 21 Jan 2025, 09:00. Room TBD @ SISSA.** (written + computer-based exam)
+
+**:warning: 17 Feb 2025, 09:00. Room TBD @ SISSA.** (written + computer-based exam)
+
+
+Optional oral exams will follow in subsequent days.
+
+:information_source: Students from UniTS: please register on Esse3.<br>
+
+:information_source: Students from SISSA: please register by sending me an email.
+
+---
+
 # Documents
 - [Syllabus](syllabus.md).
 - [Homework assignment rules](homework_rules.md).
