@@ -5,13 +5,13 @@ from time import time
 class Polynomial:
     def __init__(self, *coefficients):
         self.coefficients = coefficients
-    
+
     @classmethod
     def from_string(cls, poly_str):
         terms = poly_str.split("+")
         coefficients = [int(term.split("x")[0]) for term in terms]
         return cls(*coefficients)
-    
+
     def __repr__(self):
         terms = [f"{a}x^{i}" if i > 1 else f"{a}x" if i == 1 else str(a) for i, a in enumerate(self.coefficients)]
         return " + ".join(terms)
