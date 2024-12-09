@@ -8,7 +8,7 @@ _class: titlepage
 # Lecture 13
 <br>
 
-## Introduction to NumPy and SciPy for scientific computing. Data visualization. Introduction to pandas for data analysis.
+## Python's ecosystem for scientific computing.
 <br>
 
 #### Advanced Programming - SISSA, UniTS, 2024-2025
