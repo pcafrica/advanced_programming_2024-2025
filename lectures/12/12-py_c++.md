@@ -93,9 +93,9 @@ Integrating C++ and Python code is a common need in software development, especi
      - Modern, lightweight, easy to use.
      - Header-only library.
      - More pythonic bindings.
+     - Good documentation, community support.
    - Cons:
      - Less advanced features than Boost.Python.
-     - Less documentation, community support.
      - More manual work for complex bindings.
 
 ---
@@ -659,7 +659,7 @@ py::class_<Pet>(m, "Pet")
     .def_readwrite("name", &Pet::name);
 
 // Method 1: template parameter:.
-py::class_<Dog, Pet /* <- Specify C++ parent type- */>(m, "Dog")
+py::class_<Dog, Pet /* C++ parent type. */>(m, "Dog")
     .def(py::init<const std::string &>())
     .def("bark", &Dog::bark);
 ```
