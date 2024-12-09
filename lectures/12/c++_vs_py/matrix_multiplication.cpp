@@ -27,5 +27,5 @@ namespace py = pybind11;
 
 PYBIND11_MODULE(matrix_ops, m) {
   m.def("matrix_multiply", &matrix_multiply,
-        "A function which multiplies two NumPy matrices");
+        "A function which multiplies two NumPy matrices.");
 }

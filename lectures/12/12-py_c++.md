@@ -1,3 +1,4 @@
+
 <!--
 title: Lecture 12
 paginate: true
@@ -15,7 +16,7 @@ _class: titlepage
 
 ###### Pasquale Claudio Africa
 
-###### 9 Dec 2024
+###### 09 Dec 2024
 
 ---
 
@@ -1098,4 +1099,4 @@ The examples provided in the `examples` folder are adapted and extended versions
 _class: titlepage
 -->
 
-# :tada: That's all Folks!
+# :arrow_right: Python's echosystem for scientific computing. 
