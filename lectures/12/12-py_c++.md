@@ -1099,4 +1099,4 @@ The examples provided in the `examples` folder are adapted and extended versions
 _class: titlepage
 -->
 
-# :arrow_right: Python's echosystem for scientific computing. 
+# :arrow_right: Python's ecosystem for scientific computing. 
