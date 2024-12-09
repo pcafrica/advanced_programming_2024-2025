@@ -87,5 +87,5 @@ Optional oral exams will follow in subsequent days.
 | Tue 03 Dec 2024 | 14:00 - 16:00 | 128-129 | Exercise session. [[Markdown](exercises/11/11-py_classes_modules.md)] [[HTML](https://pcafrica.github.io/advanced_programming_2024-2025/exercises/11/11-py_classes_modules.html)] [[PDF](https://pcafrica.github.io/advanced_programming_2024-2025/exercises/11/11-py_classes_modules.pdf)] |
 | Mon 09 Dec 2024 | 13:00 - 15:00 | 005     | Integrating C++ and Python codes. [[Markdown](lectures/12/12-py_c++.md)] [[HTML](https://pcafrica.github.io/advanced_programming_2024-2025/lectures/12/12-py_c++.html)] [[PDF](https://pcafrica.github.io/advanced_programming_2024-2025/lectures/12/12-py_c++.pdf)] |
 | Tue 10 Dec 2024 | 14:00 - 16:00 | 128-129 | Exercise session. [[Markdown](exercises/12/12-py_c++.md)] [[HTML](https://pcafrica.github.io/advanced_programming_2024-2025/exercises/12/12-py_c++.html)] [[PDF](https://pcafrica.github.io/advanced_programming_2024-2025/exercises/12/12-py_c++.pdf)] |
-| Mon 16 Dec 2024 | 13:00 - 15:00 | 134     | Python's echosystem for scientific computing. |
+| Mon 16 Dec 2024 | 13:00 - 15:00 | 134     | Python's ecosystem for scientific computing. |
 | Tue 17 Dec 2024 | 14:00 - 16:00 | 128-129 | Exercise session. |
