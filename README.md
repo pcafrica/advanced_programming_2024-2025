@@ -30,9 +30,9 @@ Unless otherwise specified, all content here is licensed under a
 
 # :calendar: Exam dates
 
-**:warning: 21 Jan 2025, 09:00. Room TBD @ SISSA.** (written + computer-based exam)
+**:warning: 21 Jan 2025, 09:00. Room 005 @ SISSA.** (written + computer-based exam)
 
-**:warning: 17 Feb 2025, 09:00. Room TBD @ SISSA.** (written + computer-based exam)
+**:warning: 17 Feb 2025, 09:00. Room 134 @ SISSA.** (written + computer-based exam)
 
 
 Optional oral exams will follow in subsequent days.
