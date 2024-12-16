@@ -92,6 +92,3 @@ _class: titlepage
 1. Import the `XORDataset` from `dataset.py`
 2. Design a neural network in PyTorch that correctly classify the samples 
 3. As a Loss Function, use `nn.BCEWithLogitsLoss()`
-
-
-

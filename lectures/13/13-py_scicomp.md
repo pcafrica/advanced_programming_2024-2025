@@ -46,6 +46,9 @@ _class: titlepage
    - Dataframes
    - Operations on dataframes
 
+6. PyTorch
+   - Neural networks
+
 </div>
 </div>
 
@@ -1513,7 +1516,15 @@ pd.read_excel("foo.xlsx", "Sheet1", index_col=None, na_values=["NA"])
 
 ---
 
-# Pytorch
+<!--
+_class: titlepage
+-->
+
+# PyTorch
+
+---
+
+# PyTorch
 Quoting the official [PyTorch tutorial introduction](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html):
 PyTorch is a Python-based scientific computing package serving two broad purposes:
 
@@ -1524,7 +1535,7 @@ The package is imported in Python with `import torch`.
 
 ---
 
-# Pytorch: the class `Tensor` (1/2)
+# PyTorch: the class `Tensor` (1/2)
 Tensors are the PyTorch equivalent to Numpy arrays, with the addition to also have support for GPU acceleration.
 In multilinear algebra, tensor is a generalization of vector and matrix concepts:
 - a vector is a 1-D tensor
@@ -1543,7 +1554,7 @@ x = torch.Tensor(2,3,4)
 
 ---
 
-# Pytorch: the class `Tensor` (2/2)
+# PyTorch: the class `Tensor` (2/2)
 The function `torch.Tensor` allocates memory for the desired tensor, but reuses any values that have already been in the memory. To directly assign values to the tensor during initialization, there are many alternatives including:
 
 - `torch.zeros`,`torch.ones`,`torch.rand`,`torch.randn`,`torch.arange`..
@@ -1586,14 +1597,14 @@ Other commonly used operations include matrix multiplications, which are essenti
 - `torch.einsum`: Performs matrix multiplications and more (i.e. sums of products) using the Einstein summation convention.
 ---
 
-# Pytorch: Dynamic Computation Graph (1/3)
+# PyTorch: Dynamic Computation Graph (1/3)
 One of the main reasons for using PyTorch in Deep Learning projects is that we can automatically get gradients/derivatives of functions that we define.
 We will mainly use PyTorch for implementing neural networks, and they are just fancy functions. If we use weight matrices in our function that we want to learn, then those are called the **parameters** or simply the **weights**.
 Given an input `x`, we define our function by manipulating that input, usually by matrix-multiplications with weight matrices and additions with so-called bias vectors. As we manipulate our input, we are automatically creating a computational graph.
 This graph shows how to arrive at our output from our input. PyTorch is a **define-by-run** framework; this means that we can just do our manipulations, and PyTorch will keep track of that graph for us. Thus, we create a dynamic computation graph along the way.
 
 ---
-# Pytorch: Dynamic Computation Graph (2/3)
+# PyTorch: Dynamic Computation Graph (2/3)
 Example: let's compute the computational graph of the function 
 
 
@@ -1618,7 +1629,7 @@ We can perform backpropagation on the computation graph by calling the function 
 
 ---
 
-# Pytorch: Dynamic Computation Graph (3/3)
+# PyTorch: Dynamic Computation Graph (3/3)
 Computing `y.backward()`, now `x.grad` will contain the gradient $\frac{\partial y}{\partial x}$:
 
 ```python
@@ -1652,8 +1663,8 @@ print("Device", device)
 ```
 ---
 
-# Designing Neural Networks with Pytorch
-- Pytorch is designed to build custom neural networks
+# Designing Neural Networks with PyTorch
+- PyTorch is designed to build custom neural networks
 - The package `torch.nn` makes building neural networks more convenient
 - the easiest way to build neural networks is with **Modules**:
 
@@ -1720,13 +1731,13 @@ Now we are ready to train the model (see notebook).
 ---
 # Further reading
 
-[Pytorch documentation](https://pytorch.org/docs/stable/index.html)
+[PyTorch documentation](https://pytorch.org/docs/stable/index.html)
 [UvA DL Notebooks](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial2/Introduction_to_PyTorch.html): very nice tutorials from the DL group in Amsterdam
 
 ---
 
-
 <!--
 _class: titlepage
 -->
+
 # :tada: That's all Folks!
