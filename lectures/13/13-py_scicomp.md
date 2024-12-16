@@ -21,8 +21,6 @@ _class: titlepage
 
 # Outline
 
-<div class="columns">
-<div>
 
 1. The role of Python in modern scientific computing
 
@@ -35,8 +33,6 @@ _class: titlepage
    - Relationship between NumPy and SciPy
    - Core modules in SciPy
 
-</div>
-<div>
 
 4. Data visualization
    - Overview of Matplotlib for plotting
@@ -49,8 +45,6 @@ _class: titlepage
 6. PyTorch
    - Neural networks
 
-</div>
-</div>
 
 Part of these notes is re-adapted from [these lectures](http://github.com/jrjohansson/scientific-python-lectures) ([license](LICENSE_CC-BY-3.0-DEED.md)).
 
