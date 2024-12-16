@@ -13,7 +13,7 @@ _class: titlepage
 
 #### Advanced Programming - SISSA, UniTS, 2024-2025
 
-###### Pasquale Claudio Africa
+###### Giuseppe Alessio D'Inverno
 
 ###### 17 Dec 2024
 
