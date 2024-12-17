@@ -89,12 +89,12 @@ _class: titlepage
 
 # Exercise 4: designing a Neural Network for binary classification
 
-1. Import the `XORDataset` from `dataset.py`
-2. Design a neural network in PyTorch that correctly classify the samples 
-3. As a Loss Function, use `nn.BCEWithLogitsLoss()`
+1. Import the `XORDataset` from `dataset.py`.
+2. Design a neural network in PyTorch that correctly classify the samples.
+3. As a loss function, use `nn.BCEWithLogitsLoss()`.
 
 ---
 
 # Exercise 5: code obfuscation
 
-Without executing the program, determine the output of running the code contained in `wish.cpp`.
+Without executing the program, determine the output of the code contained in `wish.cpp`.
