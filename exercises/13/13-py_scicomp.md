@@ -65,7 +65,7 @@ _class: titlepage
 # Exercise 3: pandas (1/2)
 
 1. **DataFrame operations and visualization**
-   1. Import the `sales_data.txt` dataset as a pandas DataFrame.
+   1. Import the `sales_data.csv` dataset as a pandas DataFrame.
    2. Extract data from the 'South' region, sort them by descending 'Quantity' and add a new column 'Total revenue' $=$ 'Quantity' $\times$ 'Price'.
    3. Visualize trends of 'Total revenue' by 'Date' (line plot) and by 'Product' (bar plot).
 
@@ -80,7 +80,7 @@ _class: titlepage
 # Exercise 3: pandas (2/2)
 
 3. **Time series analysis with real data**
-   1. Import the `weather_data.txt` dataset.
+   1. Import the `weather_data.csv` dataset.
    2. Resample the dataset to compute monthly averages.
    3. Computing a 7-day rolling mean.
    3. Visualize the original data and the rolling mean using line plots.
