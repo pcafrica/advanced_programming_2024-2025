@@ -62,7 +62,7 @@ void print(const std::array<int, 3> &params) {
         do {
           color_index = engine() % 6 + 1;
         } while (color_index == 4);
-        std::cout << get_color(color_index) << "O" << colors[2];
+        std::cout << get_color(color_index) << "o" << colors[2];
       } else {
         std::cout << "*";
       }
