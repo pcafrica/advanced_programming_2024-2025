@@ -22,6 +22,9 @@ _class: titlepage
 # Outline
 
 
+<div class="columns">
+<div>
+
 1. The role of Python in modern scientific computing
 
 2. NumPy
@@ -33,6 +36,8 @@ _class: titlepage
    - Relationship between NumPy and SciPy
    - Core modules in SciPy
 
+</div>
+<div>
 
 4. Data visualization
    - Overview of Matplotlib for plotting
@@ -45,6 +50,8 @@ _class: titlepage
 6. PyTorch
    - Neural networks
 
+</div>
+</div>
 
 Part of these notes is re-adapted from [these lectures](http://github.com/jrjohansson/scientific-python-lectures) ([license](LICENSE_CC-BY-3.0-DEED.md)).
 
@@ -1559,11 +1566,10 @@ The function `torch.Tensor` allocates memory for the desired tensor, but reuses 
 x = torch.Tensor([[1, 2], [3, 4]])
 print(x)
 # tensor([[1., 2.],
-#        [3., 4.]])
+#         [3., 4.]])
 
 ```
-Tensors can be converted to numpy arrays, and numpy arrays back to tensors. To transform a numpy array into a tensor, we can use the function `torch.from_numpy`.
-To transform a PyTorch tensor back to a numpy array, we can use the function `.numpy() on tensors.
+Tensors can be converted to numpy arrays (`.numpy()`), and numpy arrays back to tensors (`torch.from_numpy()`).
 
 ---
 
@@ -1579,7 +1585,7 @@ print("X", x)
 x = x.view(2, 3)
 print("X", x)
 #X tensor([[0, 1, 2],
-#        [3, 4, 5]])
+#          [3, 4, 5]])
 ```
 ---
 
@@ -1600,7 +1606,6 @@ This graph shows how to arrive at our output from our input. PyTorch is a **defi
 ---
 # PyTorch: Dynamic Computation Graph (2/3)
 Example: let's compute the computational graph of the function 
-
 
 $$
 y = \frac{1}{\ell (x)} \sum\limits_i [(x_i + 2)^2 + 3]
@@ -1680,8 +1685,8 @@ class MyModule(nn.Module):
 The class `torch.utils.data.DataLoader` represents a Python iterable over a dataset with support for automatic batching, multi-process data loading and many more features. The data loader communicates with the dataset using the function `__getitem__`, and stacks its outputs as tensors over the first dimension to form a batch. In contrast to the dataset class, we usually don’t have to define our own data loader class, but can just create an object of it with the dataset as input. Additionally, we can configure our data loader with the following input arguments (only a selection, see full list here):
 
 - `batch_size`: Number of samples to stack per batch
-- `shuffle: If True, the data is returned in a random order. This is important during training for introducing stochasticity
-- ..
+- `shuffle`: If True, the data is returned in a random order. This is important during training for introducing stochasticity
+- ...
 
 ---
 
@@ -1726,6 +1731,7 @@ Now we are ready to train the model (see notebook).
 # Further reading
 
 [PyTorch documentation](https://pytorch.org/docs/stable/index.html)
+
 [UvA DL Notebooks](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial2/Introduction_to_PyTorch.html): very nice tutorials from the DL group in Amsterdam
 
 ---
