@@ -1,3 +1,5 @@
+// Compile using -std=c++17.
+
 #include <array>
 #include <chrono>
 #include <cmath>
