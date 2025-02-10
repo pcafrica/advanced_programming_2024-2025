@@ -602,7 +602,7 @@ When executing a command, like `ls` a subprocess is created. A subprocess inheri
 
 The command `source script_file` executes the commands contained in `script_file` as if they were typed directly on the terminal. It is only used on scripts that have to change some environmental variables or define aliases or function. Typing `. script_file` does the same.
 
-If the environment should not be altered, use `./script_file`, instead. 
+If the environment should not be altered, use `./script_file`, instead.
 
 ---
 
