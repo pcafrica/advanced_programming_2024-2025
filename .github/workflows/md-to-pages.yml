@@ -32,17 +32,17 @@ jobs:
       - name: Build lectures
         run: |
              marp --bespoke.progress --theme style/custom.css --html -I lectures/ -o lectures/
-             marp --bespoke.progress --theme style/custom.css --html -I lectures/ -o lectures/ --pdf --pdf-outlines
+             marp --bespoke.progress --theme style/custom.css --html -I lectures/ -o lectures/ --pdf --pdf-outlines --allow-local-files
 
       - name: Build exercise sessions
         run: |
              marp --bespoke.progress --theme style/custom.css --html -I exercises/ -o exercises/
-             marp --bespoke.progress --theme style/custom.css --html -I exercises/ -o exercises/ --pdf --pdf-outlines
+             marp --bespoke.progress --theme style/custom.css --html -I exercises/ -o exercises/ --pdf --pdf-outlines --allow-local-files
 
       - name: Build homeworks
         run: |
              marp --bespoke.progress --theme style/custom.css --html -I homeworks/ -o homeworks/
-             marp --bespoke.progress --theme style/custom.css --html -I homeworks/ -o homeworks/ --pdf --pdf-outlines
+             marp --bespoke.progress --theme style/custom.css --html -I homeworks/ -o homeworks/ --pdf --pdf-outlines --allow-local-files
 
       - name: Setup pages
         uses: actions/configure-pages@v5
