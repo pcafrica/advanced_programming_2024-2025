@@ -30,8 +30,8 @@ Unless otherwise specified, all content here is licensed under a
 
 # :calendar: Next exam dates
 
-**:warning: 06 Jun 2025, 09:00. Room TBD @ SISSA.** (written + computer-based exam)
-**:warning: 07 Jul 2025, 09:00. Room TBD @ SISSA.** (written + computer-based exam)
+**:warning: 06 Jun 2025, 09:00. Room 136 @ SISSA.** (written + computer-based exam)
+**:warning: 07 Jul 2025, 09:00. Room 136 @ SISSA.** (written + computer-based exam)
 
 Optional oral exams will follow in subsequent days.
 
